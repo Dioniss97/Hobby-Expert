@@ -179,6 +179,7 @@
   button,
   input { /* 1 */
     overflow: visible;
+    padding: 0;
   }
   
   /**
@@ -373,4 +374,5 @@ th {
 ol, ul {
     list-style: none;
     padding-left: 0;
+    margin: 0;
 }

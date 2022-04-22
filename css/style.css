@@ -174,6 +174,7 @@ button,
 input {
   /* 1 */
   overflow: visible;
+  padding: 0;
 }
 
 /**
@@ -360,6 +361,7 @@ th {
 ol, ul {
   list-style: none;
   padding-left: 0;
+  margin: 0;
 }
 
 input::-webkit-outer-spin-button,
@@ -614,6 +616,51 @@ footer .mapouter {
   color: #ffffff;
 }
 
+form legend {
+  color: hsl(46deg, 100%, 30%);
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 2% 0;
+}
+form .form-element {
+  margin-bottom: 1rem;
+}
+form .form-element .form-element-label {
+  margin-bottom: 0.5rem;
+}
+form .form-element .form-element-label label {
+  color: hsl(0deg, 0%, 50%);
+  font-weight: bold;
+}
+form .form-element input {
+  padding: 0.2rem 5%;
+  width: 90%;
+}
+form .form-element textarea {
+  min-height: 8em;
+  padding: 0.2rem 2%;
+  resize: none;
+  width: 96%;
+}
+form .form-send-button {
+  margin-left: auto;
+  max-width: max-content;
+}
+form .form-send-button button {
+  background: linear-gradient(to top, hsl(46deg, 100%, 30%), hsl(240deg, 9%, 23%));
+  border: 2px solid hsl(0deg, 0%, 50%);
+  border-radius: 10px;
+  color: hsl(0deg, 0%, 0%);
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 8%;
+  padding: 0.5rem 1rem;
+}
+form .form-send-button button:hover {
+  transition: 0.4s;
+  box-shadow: -2px 3px 3px hsl(0deg, 0%, 50%);
+}
+
 .products {
   background-color: hsl(240deg, 9%, 23%);
   border-top: 0.4em solid hsl(46deg, 100%, 20%);
@@ -680,17 +727,14 @@ footer .mapouter {
   border-top: 0.2em solid hsl(46deg, 100%, 20%);
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  padding: 2% 0;
+  padding: 2% 5%;
+  width: 90%;
 }
 .contact .contact-info {
   display: flex;
-  justify-content: center;
 }
 .contact .contact-info .contact-info-logo {
   width: 14%;
-}
-.contact .contact-info ul {
-  margin: 0;
 }
 .contact .contact-info ul li {
   display: flex;
@@ -700,47 +744,6 @@ footer .mapouter {
 .contact .contact-info ul li span {
   margin-left: 10%;
   color: hsl(0deg, 0%, 50%);
-}
-.contact .contact-form {
-  width: 90%;
-  margin-right: auto;
-}
-.contact .contact-form legend {
-  color: hsl(46deg, 100%, 30%);
-  font-size: 1.6em;
-  font-weight: bold;
-  padding: 2% 0;
-}
-.contact .contact-form label {
-  color: hsl(0deg, 0%, 50%);
-  font-weight: bold;
-}
-.contact .contact-form input {
-  margin: 4% 0;
-  width: 100%;
-}
-.contact .contact-form .contact-form-textarea textarea {
-  margin: 2% 0;
-  width: 100%;
-  min-height: 8em;
-  resize: none;
-}
-.contact .contact-form .contact-form-textarea .enter {
-  margin-left: auto;
-  max-width: 20%;
-}
-.contact .contact-form .contact-form-textarea .enter input {
-  background: linear-gradient(to top, hsl(46deg, 100%, 30%), hsl(240deg, 9%, 23%));
-  border: 2px solid hsl(0deg, 0%, 50%);
-  border-radius: 10px;
-  margin-top: 8%;
-  padding: 4%;
-  width: 105%;
-}
-.contact .contact-form .contact-form-textarea .enter input:hover {
-  padding: 12%;
-  transition: 0.4s;
-  box-shadow: -2px 8px 8px hsl(0deg, 0%, 50%);
 }
 
 /*# sourceMappingURL=style.css.map */
