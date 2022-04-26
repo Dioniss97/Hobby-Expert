@@ -2,9 +2,8 @@ header {
     background-color: hsl(240, 9%, 23%);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    width: 90%;
     margin: 1rem auto 0rem auto;
-    padding: 2% 0;
+    padding: .2rem 0;
 
     .header-logo {
         display: flex;
@@ -15,12 +14,14 @@ header {
             margin-bottom: 2%;
 
             h1 {
+                text-align: center;
                 color: hsl(46, 100%, 30%);
             }
         }
 
         .header-logo-img {
-            padding: 8%;
+            width: 50%;
+            padding: 1rem;
         }
     }
 }

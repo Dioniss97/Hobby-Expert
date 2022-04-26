@@ -48,22 +48,21 @@
             margin-bottom: 2rem;
             
             .product-window {
-                align-items:flex-start;
+                align-items: flex-start;
                 display: flex;
                 justify-content: flex-end;
-            }
-    
-            .product-window-price {
-                background-color: hsla(32, 100%, 88%, 0.555);
-                border-bottom: .1em solid hsl(240, 9%, 23%);
-                box-shadow: -1px 4px 8px 1px;
-                border-bottom-left-radius: 10px;
-                padding: .4%;
-                position: absolute;
+
+                .product-window-price {
+                    background-color: hsla(32, 100%, 88%, 0.555);
+                    border-bottom: .1em solid hsl(240, 9%, 23%);
+                    box-shadow: -1px 4px 8px 1px;
+                    border-bottom-left-radius: 10px;
+                    padding: .4%;
+                    position: absolute;
+                }
             }
     
             .product-title {
-
                 min-height: 10vh;
     
                 h4 {
@@ -91,6 +90,4 @@
             }
         }
     }
-
-   
 }

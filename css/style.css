@@ -642,28 +642,39 @@ footer .mapouter {
 .slider {
   background-color: #353540;
 }
-.slider .slider-elements {
-  position: absolute;
+.slider .slider-image {
+  width: 100%;
 }
-.slider .slider-elements .slider-title h4 {
+.slider .slider-title {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+.slider .slider-title h4 {
   background-color: #cacaca;
   border-radius: 8px;
   color: #664e00;
   font-size: 2em;
   opacity: 70%;
-  padding: 2%;
+  padding: 1rem;
 }
-.slider .slider-elements .slider-button button {
+.slider .slider-button {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+.slider .slider-button button {
   border: none;
   border-radius: 8px;
   background-color: #997500;
-  padding: 2%;
+  cursor: pointer;
+  padding: 1rem;
   transition-duration: 0.4s;
 }
-.slider .slider-elements .slider-button button:hover {
+.slider .slider-button button:hover {
   background-color: #997500;
   box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.3843137255), 0 18px 50px 0 rgba(255, 255, 255, 0.3843137255);
-  color: #ffffff;
+  color: hsl(0deg, 0%, 100%);
 }
 
 .cart-resume-table {
@@ -796,7 +807,7 @@ footer .mapouter {
   display: flex;
   justify-content: flex-end;
 }
-.products .products-gallery .product .product-window-price {
+.products .products-gallery .product .product-window .product-window-price {
   background-color: hsla(32deg, 100%, 88%, 0.555);
   border-bottom: 0.1em solid hsl(240deg, 9%, 23%);
   box-shadow: -1px 4px 8px 1px;

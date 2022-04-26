@@ -6,3 +6,12 @@ main {
     margin: 0 auto;
     width: 90%;
 }
+
+
+.desktop-only{
+    display: revert;
+}
+
+.mobile-only{
+    display: none;
+}

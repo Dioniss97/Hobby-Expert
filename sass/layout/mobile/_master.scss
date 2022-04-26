@@ -6,10 +6,10 @@ main{
 
 }
 
-.desktop-only {
-
+.desktop-only{
+    display: none;
 }
 
-.mobile-only {
-    display: none;
+.mobile-only{
+    display: revert;
 }
