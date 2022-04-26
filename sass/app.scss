@@ -2,19 +2,32 @@
 
 @import "helpers/variables";
 @import "helpers/mixins";
+
+// Base
 @import "base/normalize";
 @import "base/contents";
 @import "base/typography";
+@import "base/iframe";
+
+// Layout
 @import "layout/desktop/master";
 @import "layout/desktop/header";
 @import "layout/desktop/footer";
 @import "layout/desktop/columns";
+
+// Components
+@import "components/desktop/amount-button";
 @import "components/desktop/categories";
 @import "components/desktop/slider";
-@import "components/desktop/form";
+@import "components/desktop/cart-resume-table";
+
+// Pages
 @import "pages/home/desktop/home";
+@import "pages/cart/desktop/cart";
 @import "pages/products/desktop/products";
 @import "pages/contact/desktop/contact";
+@import "pages/product/desktop/product";
+@import "pages/checkout/desktop/checkout";
 
 
 

@@ -1,3 +1,26 @@
-header{
-    
+header {
+    background-color: hsl(240, 9%, 23%);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 90%;
+    margin: 1rem auto 0rem auto;
+    padding: 2% 0;
+
+    .header-logo {
+        display: flex;
+        justify-content: space-between;
+
+        .header-logo-title {
+            text-decoration: 4px underline hsl(46, 100%, 20%);;
+            margin-bottom: 2%;
+
+            h1 {
+                color: hsl(46, 100%, 30%);
+            }
+        }
+
+        .header-logo-img {
+            padding: 8%;
+        }
+    }
 }

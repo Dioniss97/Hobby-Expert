@@ -2,13 +2,22 @@
 
 @import "helpers/variables";
 @import "helpers/mixins";
+
+//Base
 @import "base/contents";
 @import "base/normalize";
 @import "base/typography";
+@import "base/iframe";
+
+// Layout
 @import "layout/mobile/master";
 @import "layout/mobile/header";
 @import "layout/mobile/footer";
 @import "layout/mobile/columns";
+
+// Pages
 @import "pages/home/mobile/home";
 
-
+// Components
+@import "components/mobile/categories";
+@import "components/mobile/slider";
