@@ -451,6 +451,14 @@ main {
   width: 90%;
 }
 
+.desktop-only {
+  display: revert;
+}
+
+.mobile-only {
+  display: none;
+}
+
 header {
   background-color: hsl(240deg, 9%, 23%);
   border-top-left-radius: 20px;

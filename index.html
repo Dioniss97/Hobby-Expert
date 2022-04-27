@@ -11,6 +11,14 @@
 
 <body>
     <header>
+        <div class="header-menu-mobile mobile-only" id="header-menu-mobile">
+            <ul>
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="products.html">tienda</a></li>
+                <li><a href="cart.html">carrito</a></li>
+                <li><a href="contact.html">contacto</a></li>
+            </ul>
+        </div>
         <div class="desktop-two-columns">
             <div class="column">
                 <div class="header-logo">
@@ -18,6 +26,11 @@
                         <div class="column">
                             <div class="header-logo-img">
                                 <img src="img/AK47.svg" alt="ak47">
+                            </div>
+                            <div id="menuToggle">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                         </div>
                         <div class="column">
@@ -36,7 +49,7 @@
                     <ul>
                         <li><a href="index.html">inicio</a></li>
                         <li><a href="products.html">tienda</a></li>
-                        <li><a href="">servicios</a></li>
+                        <li><a href="cart.html">carrito</a></li>
                         <li><a href="contact.html">contacto</a></li>
                     </ul>
                 </div>
@@ -103,7 +116,7 @@
     </main>
 
     <footer>
-        <div class="desktop-two-columns mobile-two-columns">
+        <div class="desktop-two-columns mobile-one-column">
             <div class="column">
                 <div class="footer-info">
                     <ul>
@@ -120,16 +133,14 @@
                 <div class="footer-map">
                     <div class="mapouter">
                         <div class="gmap_canvas">
-                            <iframe id="gmap_canvas"
-                                src="https://maps.google.com/maps?q=Black%20Shadow&t=k&z=9&ie=UTF8&iwloc=&output=embed"></iframe>
-                            <a href="https://fmovies-online.net">fmovies</a><br>
-                            <a href="https://www.embedgooglemap.net">email google map</a>
+                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Black%20Shadow&t=k&z=9&ie=UTF8&iwloc=&output=embed"></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <script type="module" src="js/mobile/app.js"></script>
 </body>
 
 </html>
