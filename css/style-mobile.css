@@ -458,30 +458,6 @@ header .header-logo .header-logo-img {
   margin-top: 0.4rem;
   width: 60%;
 }
-header .header-menu-mobile {
-  background-color: black;
-  height: 100vh;
-  left: 0;
-  position: fixed;
-  transition: top 0.5s;
-  top: -100vh;
-  width: 50vh;
-  z-index: 3;
-}
-header .header-menu-mobile.active {
-  top: 0;
-}
-header .header-menu-mobile.active ul {
-  margin-top: 4rem;
-}
-header .header-menu-mobile.active ul li {
-  padding: 1rem;
-  text-align: center;
-}
-header .header-menu-mobile.active ul li a {
-  color: hsl(0deg, 0%, 100%);
-  font-size: 2rem;
-}
 
 footer {
   background-color: #a9a9a9;
@@ -628,66 +604,90 @@ footer .mapouter {
   color: hsl(0deg, 0%, 100%);
 }
 
-#menuToggle {
+.hamburger {
   display: block;
   position: relative;
-  left: 40px;
-  top: -50px;
   z-index: 4;
   -webkit-user-select: none;
   user-select: none;
 }
-
-.header-menu-mobile ul li a {
-  text-decoration: none;
-  color: #232323;
-  transition: color 0.3s ease;
-}
-.header-menu-mobile ul li a:hover {
-  color: tomato;
+.hamburger.index {
+  left: 40px;
+  top: -50px;
 }
 
-#menuToggle span {
+.hamburger span {
   display: block;
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #cdcdcd;
+  background: hsl(0deg, 0%, 90%);
   border-radius: 3px;
-  z-index: 1;
+  z-index: 4;
   transform-origin: 4px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
-#menuToggle span:first-child {
+.hamburger span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2) {
+.hamburger span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle.active span {
+.hamburger.active span {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  transform: rotate(45deg) translate(-18px, -20px);
+  background: 0.232323;
 }
 
-#menuToggle.active span:nth-last-child(3) {
+.hamburger.active span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle.active span:nth-last-child(2) {
-  transform: rotate(-45deg) translate(0, -1px);
+.hamburger.active span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, 2px);
 }
 
-/*
- * And let's slide it in from the left
- */
-#menuToggle input:checked ~ ul {
+.hamburger input:checked ~ ul {
   transform: none;
+}
+
+.menu {
+  background-color: hsl(0deg, 0%, 50%);
+  height: 100vh;
+  left: 0;
+  opacity: 0.9;
+  position: fixed;
+  transition: top 1s;
+  top: -100vh;
+  width: 50vh;
+  z-index: 3;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: 0.232323;
+  transition: color 0.3s ease;
+}
+.menu ul li a:hover {
+  color: tomato;
+}
+.menu.active {
+  top: 0;
+}
+.menu.active ul {
+  margin-top: 4rem;
+}
+.menu.active ul li {
+  padding: 1rem;
+  text-align: center;
+}
+.menu.active ul li a {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2rem;
 }
 
 .mapouter {

@@ -428,20 +428,6 @@ a:hover, a:focus {
   outline-offset: 0;
 }
 
-.mapouter {
-  position: relative;
-  text-align: right;
-  height: 400px;
-  width: 500px;
-}
-
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 400px;
-  width: 500px;
-}
-
 body {
   background-color: #5e5741;
 }
@@ -514,11 +500,6 @@ footer ul li {
   font-weight: bold;
   padding: 4%;
 }
-footer .mapouter {
-  border: 0.8em solid #808080;
-  border-radius: 8px;
-  margin: 4% 0;
-}
 
 .desktop-five-columns {
   display: flex;
@@ -590,7 +571,7 @@ footer .mapouter {
   background-color: hsl(46deg, 100%, 20%);
   color: hsl(240deg, 9%, 80%);
   cursor: pointer;
-  padding: 0.2rem 0;
+  padding: 0.4rem 0;
   width: 3rem;
 }
 .amount-button .minus button:hover {
@@ -601,9 +582,15 @@ footer .mapouter {
   background-color: hsl(240deg, 9%, 40%);
   padding: 0.2rem 1rem;
 }
-.amount-button .amount span {
+.amount-button .amount input {
+  background-color: hsl(240deg, 9%, 40%);
+  border: none;
+  border-radius: 0.6rem;
   color: hsl(0deg, 0%, 100%);
   font-weight: bold;
+  padding: 0.2rem 0;
+  text-align: center;
+  width: 2rem;
 }
 .amount-button .plus {
   background-color: hsl(0deg, 0%, 100%);
@@ -612,7 +599,7 @@ footer .mapouter {
   background-color: hsl(46deg, 100%, 20%);
   color: hsl(240deg, 9%, 80%);
   cursor: pointer;
-  padding: 0.2rem 0;
+  padding: 0.4rem 0;
   width: 3rem;
 }
 .amount-button .plus button:hover {
@@ -728,6 +715,112 @@ footer .mapouter {
 }
 .cart-resume-table table tr td {
   color: hsl(0deg, 0%, 100%);
+}
+
+.mapouter {
+  border: 0.8em solid #808080;
+  border-radius: 8px;
+  margin: 4% 0;
+  text-align: right;
+  height: 400px;
+  width: 500px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 400px;
+  width: 500px;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 4;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.hamburger .faq {
+  left: 40px;
+  top: -50px;
+}
+
+.header-menu-mobile ul li a {
+  text-decoration: none;
+  color: 0.232323;
+  transition: color 0.3s ease;
+}
+.header-menu-mobile ul li a:hover {
+  color: tomato;
+}
+
+.hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: hsl(0deg, 0%, 80%);
+  border-radius: 3px;
+  z-index: 4;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+.hamburger span:first-child {
+  transform-origin: 0% 0%;
+}
+
+.hamburger span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+.hamburger.active span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-18px, -20px);
+  background: 0.232323;
+}
+
+.hamburger.active span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.hamburger.active span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, 2px);
+}
+
+/*
+ * And let's slide it in from the left
+ */
+.hamburger input:checked ~ ul {
+  transform: none;
+}
+
+.menu {
+  background-color: hsl(0deg, 0%, 50%);
+  height: 100vh;
+  left: 0;
+  opacity: 0.9;
+  position: fixed;
+  transition: top 1s;
+  top: -100vh;
+  width: 50vh;
+  z-index: 3;
+}
+.menu.active {
+  top: 0;
+}
+.menu.active ul {
+  margin-top: 4rem;
+}
+.menu.active ul li {
+  padding: 1rem;
+  text-align: center;
+}
+.menu.active ul li a {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2rem;
 }
 
 .cart {
@@ -1009,6 +1102,36 @@ footer .mapouter {
 }
 .checkout .checkout-form select {
   padding: 0.12rem;
+}
+.checkout .checkout-payment .checkout-payment-radio {
+  margin: 1rem;
+}
+.checkout .checkout-payment .checkout-payment-radio input {
+  margin: 1rem;
+}
+.checkout .checkout-payment button {
+  background-color: hsl(240deg, 9%, 40%);
+  border: 4px solid hsl(46deg, 100%, 20%);
+  border-radius: 6px;
+  color: hsl(0deg, 0%, 100%);
+  cursor: pointer;
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+}
+.checkout .checkout-payment button:hover {
+  opacity: 0.7;
+  transition: 0.6s;
+}
+
+.panel {
+  background-color: hsl(240deg, 9%, 23%);
+}
+.panel .panel-header {
+  background-color: #664E00;
+}
+.panel .panel-header .panel-header-hamburger {
+  display: flex;
+  justify-content: flex-end;
 }
 
 /*# sourceMappingURL=style.css.map */

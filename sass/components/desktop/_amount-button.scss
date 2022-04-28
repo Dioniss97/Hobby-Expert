@@ -11,7 +11,7 @@
             background-color: hsl(46, 100%, 20%);
             color: hsl(240, 9%, 80%);
             cursor: pointer;
-            padding: .2rem 0;
+            padding: .4rem 0;
             width: 3rem;
         }
 
@@ -25,9 +25,15 @@
         background-color: hsl(240, 9%, 40%); 
         padding: .2rem 1rem;
 
-        span {
+        input {
+            background-color: hsl(240, 9%, 40%);
+            border: none;
+            border-radius: .6rem;
             color: hsl(0, 0%, 100%);
             font-weight: bold;
+            padding: .2rem 0;
+            text-align: center;
+            width: 2rem;
         }
     }
 
@@ -38,7 +44,7 @@
             background-color: hsl(46, 100%, 20%);
             color: hsl(240, 9%, 80%);
             cursor: pointer;
-            padding: .2rem 0;
+            padding: .4rem 0;
             width: 3rem;
         }
 

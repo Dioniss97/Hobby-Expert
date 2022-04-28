@@ -22,4 +22,30 @@
             padding: .12rem;
         }
     }
+
+    .checkout-payment {
+
+        .checkout-payment-radio {
+            margin: 1rem;
+
+            input {
+                margin: 1rem;
+            }
+        }
+
+        button {
+            background-color: hsl(240, 9%, 40%);
+            border: 4px solid hsl(46, 100%, 20%);
+            border-radius: 6px;
+            color: hsl(0, 0%, 100%);
+            cursor: pointer;
+            margin-left: 2rem;
+            padding: .5rem 1rem;
+        }
+
+        button:hover {
+            opacity: .7;
+            transition: .6s;
+        }
+    }
 }

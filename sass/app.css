@@ -433,20 +433,6 @@ a:hover, a:focus {
   outline-offset: 0;
 }
 
-.mapouter {
-  position: relative;
-  text-align: right;
-  height: 400px;
-  width: 500px;
-}
-
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 400px;
-  width: 500px;
-}
-
 body {
   background-color: #5e5741;
 }
@@ -833,6 +819,130 @@ footer .mapouter {
   color: white;
 }
 
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 400px;
+  width: 500px;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 400px;
+  width: 500px;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 4;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+}
+
+.hamburger .faq {
+  left: 40px;
+  top: -50px;
+}
+
+.header-menu-mobile ul li a {
+  text-decoration: none;
+  color: .232323;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.header-menu-mobile ul li a:hover {
+  color: tomato;
+}
+
+.hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cccccc;
+  border-radius: 3px;
+  z-index: 4;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.hamburger span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+.hamburger span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+.hamburger.active span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-18px, -20px);
+          transform: rotate(45deg) translate(-18px, -20px);
+  background: .232323;
+}
+
+.hamburger.active span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.hamburger.active span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, 2px);
+          transform: rotate(-45deg) translate(0, 2px);
+}
+
+/*
+ * And let's slide it in from the left
+ */
+.hamburger input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.menu {
+  background-color: gray;
+  height: 100vh;
+  left: 0;
+  opacity: .9;
+  position: fixed;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+  top: -100vh;
+  width: 50vh;
+  z-index: 3;
+}
+
+.menu.active {
+  top: 0;
+}
+
+.menu.active ul {
+  margin-top: 4rem;
+}
+
+.menu.active ul li {
+  padding: 1rem;
+  text-align: center;
+}
+
+.menu.active ul li a {
+  color: white;
+  font-size: 2rem;
+}
+
 .cart {
   background-color: #353540;
   border-top: 0.4em solid #664e00;
@@ -1213,5 +1323,22 @@ footer .mapouter {
 
 .checkout .checkout-form select {
   padding: .12rem;
+}
+
+.panel {
+  background-color: #353540;
+}
+
+.panel .panel-header {
+  background-color: #664E00;
+}
+
+.panel .panel-header .panel-header-hamburger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 /*# sourceMappingURL=app.css.map */

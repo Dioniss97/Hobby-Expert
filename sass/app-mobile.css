@@ -433,20 +433,6 @@ a:hover, a:focus {
   outline-offset: 0;
 }
 
-.mapouter {
-  position: relative;
-  text-align: right;
-  height: 400px;
-  width: 500px;
-}
-
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  height: 400px;
-  width: 500px;
-}
-
 .desktop-only {
   display: none;
 }
@@ -457,10 +443,7 @@ a:hover, a:focus {
 
 header {
   background-color: #353540;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  margin: 1rem auto 0rem auto;
-  padding: .2rem 0;
+  padding: 1rem 0;
 }
 
 header .header-logo {
@@ -475,7 +458,7 @@ header .header-logo {
 header .header-logo .header-logo-title {
   -webkit-text-decoration: 4px underline #664e00;
           text-decoration: 4px underline #664e00;
-  margin-bottom: 2%;
+  margin-bottom: 2rem;
 }
 
 header .header-logo .header-logo-title h1 {
@@ -484,8 +467,10 @@ header .header-logo .header-logo-title h1 {
 }
 
 header .header-logo .header-logo-img {
-  width: 50%;
-  padding: 1rem;
+  margin-left: auto;
+  margin-right: 1rem;
+  margin-top: .4rem;
+  width: 60%;
 }
 
 footer {
@@ -615,13 +600,28 @@ footer .mapouter {
   width: 100%;
 }
 
+.slider .header-logo-subtitle {
+  background-color: #cacaca;
+  border-radius: 1rem;
+  margin: auto;
+  opacity: .7;
+  position: absolute;
+  top: 28%;
+  width: 80%;
+}
+
+.slider .header-logo-subtitle h3 {
+  color: #664e00;
+  text-align: center;
+}
+
 .slider .slider-image {
   width: 100%;
 }
 
 .slider .slider-title {
   position: absolute;
-  bottom: 20%;
+  bottom: -10%;
   left: 20%;
 }
 
@@ -636,8 +636,8 @@ footer .mapouter {
 
 .slider .slider-button {
   position: absolute;
-  bottom: 10%;
-  left: 20%;
+  bottom: -15%;
+  left: 15%;
 }
 
 .slider .slider-button button {
@@ -657,18 +657,120 @@ footer .mapouter {
   color: white;
 }
 
-.slider .header-logo-subtitle {
-  background-color: #cacaca;
-  border-radius: 1rem;
-  margin: auto;
-  opacity: .7;
-  position: absolute;
-  top: 30%;
-  width: 80%;
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 4;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
 }
 
-.slider .header-logo-subtitle h3 {
-  color: #664e00;
+.hamburger.index {
+  left: 40px;
+  top: -50px;
+}
+
+.hamburger span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #e6e6e6;
+  border-radius: 3px;
+  z-index: 4;
+  -webkit-transform-origin: 4px 0px;
+          transform-origin: 4px 0px;
+  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.hamburger span:first-child {
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+}
+
+.hamburger span:nth-last-child(2) {
+  -webkit-transform-origin: 0% 100%;
+          transform-origin: 0% 100%;
+}
+
+.hamburger.active span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg) translate(-18px, -20px);
+          transform: rotate(45deg) translate(-18px, -20px);
+  background: .232323;
+}
+
+.hamburger.active span:nth-last-child(3) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.hamburger.active span:nth-last-child(2) {
+  -webkit-transform: rotate(-45deg) translate(0, 2px);
+          transform: rotate(-45deg) translate(0, 2px);
+}
+
+.hamburger input:checked ~ ul {
+  -webkit-transform: none;
+          transform: none;
+}
+
+.menu {
+  background-color: gray;
+  height: 100vh;
+  left: 0;
+  opacity: .9;
+  position: fixed;
+  -webkit-transition: top 1s;
+  transition: top 1s;
+  top: -100vh;
+  width: 50vh;
+  z-index: 3;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: .232323;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: tomato;
+}
+
+.menu.active {
+  top: 0;
+}
+
+.menu.active ul {
+  margin-top: 4rem;
+}
+
+.menu.active ul li {
+  padding: 1rem;
   text-align: center;
+}
+
+.menu.active ul li a {
+  color: white;
+  font-size: 2rem;
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
 }
 /*# sourceMappingURL=app-mobile.css.map */

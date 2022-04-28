@@ -1,0 +1,12 @@
+.panel {
+    background-color: hsl(240, 9%, 23%);
+
+    .panel-header {
+        background-color: #664E00;
+
+        .panel-header-hamburger {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

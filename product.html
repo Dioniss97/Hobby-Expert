@@ -87,14 +87,14 @@
                                 <span>Cantidad solicitada:</span>
                             </div>
                             <div class="amount-button"> <!-- [amount-button] -->
-                                <div class="minus">
-                                    <button>-</button>
+                                <div class="minus" >
+                                    <button id="minus">-</button>
                                 </div>
                                 <div class="amount">
-                                    <span>0</span>
+                                    <input type="number" id="amount" disabled value="1">
                                 </div>
-                                <div class="plus">
-                                    <button>+</button>
+                                <div class="plus" >
+                                    <button id="plus">+</button>
                                 </div>
                             </div>
                         </div>
@@ -134,6 +134,7 @@
             </div>
         </div>
     </footer>
+    <script type="module" src="js/app.js"></script>
 </body>
 
 </html>
