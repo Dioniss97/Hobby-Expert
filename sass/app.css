@@ -525,12 +525,6 @@ footer ul li {
   padding: 4%;
 }
 
-footer .mapouter {
-  border: .8em solid #808080;
-  border-radius: 8px;
-  margin: 4% 0;
-}
-
 .desktop-five-columns {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -639,7 +633,7 @@ footer .mapouter {
   background-color: #664e00;
   color: #c7c7d1;
   cursor: pointer;
-  padding: .2rem 0;
+  padding: .4rem 0;
   width: 3rem;
 }
 
@@ -654,9 +648,15 @@ footer .mapouter {
   padding: .2rem 1rem;
 }
 
-.amount-button .amount span {
+.amount-button .amount input {
+  background-color: #5d5d6f;
+  border: none;
+  border-radius: .6rem;
   color: white;
   font-weight: bold;
+  padding: .2rem 0;
+  text-align: center;
+  width: 2rem;
 }
 
 .amount-button .plus {
@@ -667,7 +667,7 @@ footer .mapouter {
   background-color: #664e00;
   color: #c7c7d1;
   cursor: pointer;
-  padding: .2rem 0;
+  padding: .4rem 0;
   width: 3rem;
 }
 
@@ -820,7 +820,9 @@ footer .mapouter {
 }
 
 .mapouter {
-  position: relative;
+  border: .8em solid #808080;
+  border-radius: 8px;
+  margin: 4% 0;
   text-align: right;
   height: 400px;
   width: 500px;
@@ -843,20 +845,8 @@ footer .mapouter {
        user-select: none;
 }
 
-.hamburger .faq {
-  left: 40px;
-  top: -50px;
-}
-
-.header-menu-mobile ul li a {
-  text-decoration: none;
-  color: .232323;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-.header-menu-mobile ul li a:hover {
-  color: tomato;
+.hamburger.faq {
+  margin: 1rem;
 }
 
 .hamburger span {
@@ -925,6 +915,13 @@ footer .mapouter {
   z-index: 3;
 }
 
+.menu ul li a {
+  text-decoration: none;
+  color: .232323;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
 .menu.active {
   top: 0;
 }
@@ -941,6 +938,10 @@ footer .mapouter {
 .menu.active ul li a {
   color: white;
   font-size: 2rem;
+}
+
+.menu.active ul li a:hover {
+  color: #664e00;
 }
 
 .cart {
@@ -1323,6 +1324,30 @@ footer .mapouter {
 
 .checkout .checkout-form select {
   padding: .12rem;
+}
+
+.checkout .checkout-payment .checkout-payment-radio {
+  margin: 1rem;
+}
+
+.checkout .checkout-payment .checkout-payment-radio input {
+  margin: 1rem;
+}
+
+.checkout .checkout-payment button {
+  background-color: #5d5d6f;
+  border: 4px solid #664e00;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  margin-left: 2rem;
+  padding: .5rem 1rem;
+}
+
+.checkout .checkout-payment button:hover {
+  opacity: .7;
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 .panel {

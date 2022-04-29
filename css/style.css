@@ -740,18 +740,8 @@ footer ul li {
   -webkit-user-select: none;
   user-select: none;
 }
-.hamburger .faq {
-  left: 40px;
-  top: -50px;
-}
-
-.header-menu-mobile ul li a {
-  text-decoration: none;
-  color: 0.232323;
-  transition: color 0.3s ease;
-}
-.header-menu-mobile ul li a:hover {
-  color: tomato;
+.hamburger.faq {
+  margin: 1rem;
 }
 
 .hamburger span {
@@ -808,6 +798,11 @@ footer ul li {
   width: 50vh;
   z-index: 3;
 }
+.menu ul li a {
+  text-decoration: none;
+  color: 0.232323;
+  transition: color 0.3s ease;
+}
 .menu.active {
   top: 0;
 }
@@ -821,6 +816,33 @@ footer ul li {
 .menu.active ul li a {
   color: hsl(0deg, 0%, 100%);
   font-size: 2rem;
+}
+.menu.active ul li a:hover {
+  color: hsl(46deg, 100%, 20%);
+}
+
+.tabs {
+  background-color: hsl(240deg, 9%, 40%);
+  display: flex;
+  justify-content: space-between;
+}
+.tabs .tab {
+  cursor: pointer;
+  padding: 1rem;
+}
+.tabs .tab.active {
+  background-color: hsl(46deg, 100%, 20%);
+}
+
+.contents .content {
+  background-color: hsl(240deg, 9%, 40%);
+  width: 100%;
+  height: 6rem;
+  display: none;
+}
+.contents .content.active {
+  background-color: hsl(46deg, 100%, 20%);
+  display: block;
 }
 
 .cart {
