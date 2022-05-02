@@ -1,7 +1,7 @@
 export let renderAmount = () => {
-    let amount = document.getElementsByClassName(".amount");
-    let plus = document.getElementsByClassName(".plus");
-    let minus = document.getElementsByClassName(".minus");
+    let amount = document.querySelectorAll(".amount");
+    let plus = document.querySelectorAll(".plus");
+    let minus = document.querySelectorAll(".minus");
 
     if (amount) {
 
