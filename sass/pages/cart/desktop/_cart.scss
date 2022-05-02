@@ -33,10 +33,6 @@
                     text-decoration: underline;
                 }
 
-                td:first-child {
-                    justify-items: center; //Duda: Centrar imagenes
-                }
-
                 td {
                     color: hsl(0, 0%, 100%);
                     padding: 2rem;
@@ -48,6 +44,7 @@
             }
 
             tr:first-child {
+                justify-items: center; //Duda: Centrar imagenes
 
                 th:first-child {
                     border: none;

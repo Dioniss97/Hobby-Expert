@@ -21,6 +21,10 @@
         height: 6rem;
         display: none;
 
+        p {
+            padding: 1rem;
+        }
+
         &.active {
             background-color: hsl(46, 100%, 20%);
             display: block;

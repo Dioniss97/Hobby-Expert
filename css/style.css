@@ -578,11 +578,11 @@ footer ul li {
   opacity: 0.7;
   transition: 0.6s;
 }
-.amount-button .amount {
+.amount-button .amount-style {
   background-color: hsl(240deg, 9%, 40%);
   padding: 0.2rem 1rem;
 }
-.amount-button .amount input {
+.amount-button .amount-style input {
   background-color: hsl(240deg, 9%, 40%);
   border: none;
   border-radius: 0.6rem;
@@ -840,6 +840,9 @@ footer ul li {
   height: 6rem;
   display: none;
 }
+.contents .content p {
+  padding: 1rem;
+}
 .contents .content.active {
   background-color: hsl(46deg, 100%, 20%);
   display: block;
@@ -873,15 +876,15 @@ footer ul li {
   color: hsl(46deg, 100%, 30%);
   text-decoration: underline;
 }
-.cart .cart-main-table table tr td:first-child {
-  justify-items: center;
-}
 .cart .cart-main-table table tr td {
   color: hsl(0deg, 0%, 100%);
   padding: 2rem;
 }
 .cart .cart-main-table table tr td img {
   width: 40%;
+}
+.cart .cart-main-table table tr:first-child {
+  justify-items: center;
 }
 .cart .cart-main-table table tr:first-child th:first-child {
   border: none;
