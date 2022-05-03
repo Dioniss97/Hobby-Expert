@@ -643,12 +643,12 @@ footer ul li {
   transition: .6s;
 }
 
-.amount-button .amount {
+.amount-button .amount-style {
   background-color: #5d5d6f;
   padding: .2rem 1rem;
 }
 
-.amount-button .amount input {
+.amount-button .amount-style input {
   background-color: #5d5d6f;
   border: none;
   border-radius: .6rem;
@@ -944,6 +944,58 @@ footer ul li {
   color: #664e00;
 }
 
+.tabs {
+  background-color: #5d5d6f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tabs .tab {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.tabs .tab.active {
+  background-color: #664e00;
+}
+
+.contents .content {
+  background-color: #5d5d6f;
+  width: 100%;
+  height: 6rem;
+  display: none;
+}
+
+.contents .content p {
+  padding: 1rem;
+}
+
+.contents .content.active {
+  background-color: #664e00;
+  display: block;
+}
+
+.added {
+  background-color: #1f471f;
+  color: white;
+  font-size: 2rem;
+  opacity: .7;
+  position: absolute;
+  text-align: center;
+  top: 14%;
+  left: 42%;
+  width: auto;
+  height: 6rem;
+}
+
+.added.active {
+  display: block;
+}
+
 .cart {
   background-color: #353540;
   border-top: 0.4em solid #664e00;
@@ -977,10 +1029,6 @@ footer ul li {
   text-decoration: underline;
 }
 
-.cart .cart-main-table table tr td:first-child {
-  justify-items: center;
-}
-
 .cart .cart-main-table table tr td {
   color: white;
   padding: 2rem;
@@ -988,6 +1036,10 @@ footer ul li {
 
 .cart .cart-main-table table tr td img {
   width: 40%;
+}
+
+.cart .cart-main-table table tr:first-child {
+  justify-items: center;
 }
 
 .cart .cart-main-table table tr:first-child th:first-child {

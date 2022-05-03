@@ -848,6 +848,32 @@ footer ul li {
   display: block;
 }
 
+.added {
+  background-color: hsl(120deg, 40%, 20%);
+  color: hsl(0deg, 0%, 100%);
+  display: none;
+  font-size: 2rem;
+  opacity: 0.7;
+  position: absolute;
+  text-align: center;
+  top: 14%;
+  left: 42%;
+  width: auto;
+  height: 4rem;
+}
+.added.active {
+  display: block;
+  animation: hideMe 2s forwards;
+}
+@keyframes hideMe {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .cart {
   background-color: hsl(240deg, 9%, 23%);
   border-top: 0.4em solid hsl(46deg, 100%, 20%);

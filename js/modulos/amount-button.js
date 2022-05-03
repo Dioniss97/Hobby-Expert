@@ -1,23 +1,31 @@
 export let renderAmount = () => {
-    let amount = document.querySelectorAll(".amount");
-    let plus = document.querySelectorAll(".plus");
-    let minus = document.querySelectorAll(".minus");
+    let pluses = document.querySelectorAll(".plus");
+    let minuses = document.querySelectorAll(".minus");
+    let sumaresta;
 
-    if (amount) {
+    pluses.forEach(plus => {
 
-        plus.forEach(element => {
+        plus.addEventListener("click", () => {
 
-            plus.addEventListener("click", () => {
+            let father = plus.parentNode;
+            parseInt(father.querySelector(".amount").value) + 1;
 
-                amount.value = (parseInt(amount.value) + 1);
-            });
-            minus.addEventListener("click", () => {
-
-                if (amount.value > 1) {
-
-                    amount.value = (parseInt(amount.value) - 1);
-                }
-            });
+            console.log(father.querySelector(".amount").value);
+            console.log(plus.parentNode);
+            console.log(father.querySelector(".amount"));
         });
-    }
+    });
+
+    minuses.forEach(minus => {
+
+        minus.addEventListener("click", () => {
+
+            let father = minus.parentNode;
+            parseInt(father.querySelector(".amount").value - 1);
+
+            console.log(father.querySelector(".amount").value);
+            console.log(minus.parentNode);
+            console.log(father.querySelector(".amount"));
+        });
+    });
 }
