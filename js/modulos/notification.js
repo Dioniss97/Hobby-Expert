@@ -1,14 +1,22 @@
-export let renderNotification = () => {
+export let renderNotification = (message, status) => {
 
-    let add = document.querySelector(".ad-to-cart-button");
     let added = document.querySelector(".added");
 
-    if (add) {
+    added.innerHTML = message;
 
-        add.addEventListener("click", () => {
-            
-            added.classList.remove("active");
-            added.classList.add("active");
-        });
+    if (added) {
+
+        added.classList.add(status);
+        
+        // if (status == "success") {
+        //     added.classList.add("active");
+        // } else if (status == "error") {
+        //     added.classList.add("active-red");
+        // }
+
+        setTimeout(() => {
+
+            added.classList.remove("success", "error");
+        }, 5000);
     }
 }

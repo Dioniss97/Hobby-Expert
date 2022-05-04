@@ -1,26 +1,28 @@
 .added {
+    align-items: center;
     background-color: hsl(120, 40%, 20%);
+    border-radius: 6rem;
     color: hsl(0, 0%, 100%);
     display: none;
     font-size: 2rem;
     opacity: .7;
+    padding: .6rem;
     position: absolute;
     text-align: center;
     top: 14%;
-    left: 42%;
+    left: 40%;
     width: auto;
     height: 4rem;
 
-    &.active {
-        display: block;
-        animation: hideMe 2s forwards;
+    p {
+        margin-top: .6rem;
     }
-    @keyframes hideMe{
-        0%{
-            opacity: 1;
-        }
-        100%{
-            opacity: 0;
-        }
+
+    &.success {
+        display: block;
+    }
+    &.error {
+        background-color: hsl(0, 100%, 50%);
+        display: block;
     }
 }

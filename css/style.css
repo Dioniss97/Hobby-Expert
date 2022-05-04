@@ -849,29 +849,30 @@ footer ul li {
 }
 
 .added {
+  align-items: center;
   background-color: hsl(120deg, 40%, 20%);
+  border-radius: 6rem;
   color: hsl(0deg, 0%, 100%);
   display: none;
   font-size: 2rem;
   opacity: 0.7;
+  padding: 0.6rem;
   position: absolute;
   text-align: center;
   top: 14%;
-  left: 42%;
+  left: 40%;
   width: auto;
   height: 4rem;
 }
-.added.active {
-  display: block;
-  animation: hideMe 2s forwards;
+.added p {
+  margin-top: 0.6rem;
 }
-@keyframes hideMe {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.added.success {
+  display: block;
+}
+.added.error {
+  background-color: hsl(0deg, 100%, 50%);
+  display: block;
 }
 
 .cart {
@@ -1112,18 +1113,18 @@ footer ul li {
   display: flex;
   justify-content: center;
 }
-.product-view .product-view-info .product-view-info-add-to-cart .ad-to-cart-button {
+.product-view .product-view-info .product-view-info-add-to-cart .add-to-cart-button {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 8px;
 }
-.product-view .product-view-info .product-view-info-add-to-cart .ad-to-cart-button button {
+.product-view .product-view-info .product-view-info-add-to-cart .add-to-cart-button button {
   background-color: hsl(240deg, 9%, 40%);
   border: 4px solid hsl(46deg, 100%, 20%);
   border-radius: 6px;
   color: hsl(0deg, 0%, 100%);
   cursor: pointer;
 }
-.product-view .product-view-info .product-view-info-add-to-cart .ad-to-cart-button button:hover {
+.product-view .product-view-info .product-view-info-add-to-cart .add-to-cart-button button:hover {
   opacity: 0.9;
   transition: 0.6s;
   padding: 1rem;

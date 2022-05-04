@@ -13,6 +13,7 @@ export let renderTabs2 = () => {
                     contents.classList.remove("active");
                     tab.classList.remove("active");
                 });
+                
                 if (tabs.dataset.target == contents.dataset.value) {
                     tab.classList.add("active");
                     contents.classList.add("active");
