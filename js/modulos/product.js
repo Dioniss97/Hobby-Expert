@@ -1,16 +1,27 @@
-import { renderNotification } from "./notification.js";
-
 export let renderProduct = () => {
 
-    let add = document.querySelector(".add-to-cart-button");
-    //let amount = document.querySelector(".amount")
+    let addButton = document.querySelector(".add-to-cart-button");
+    let amount = document.querySelector(".amount");
 
-    if (add) {
-    
-        add.addEventListener("click", () => {
+    if (addButton) {
 
-            renderNotification("Producto/s añadido con exito.", "success");
+        addButton.addEventListener("click", () => {
 
+            if (amount.value > 0) {
+                document.dispatchEvent(new CustomEvent("message", {
+                    detail: {
+                        text: "Producto añadido con éxito.",
+                        type: "success"
+                    }
+                }));
+            } else {
+                document.dispatchEvent(new CustomEvent("message", {
+                    detail: {
+                        text: "Ups, algo ha salido mal.",
+                        type: "error"
+                    }
+                }));
+            }
             // if (amount.value < 0) {
             //     renderNotification("Cagaste", "error");
             // }

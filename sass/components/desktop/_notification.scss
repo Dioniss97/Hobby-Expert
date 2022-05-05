@@ -1,8 +1,7 @@
-.added {
+.notification {
     align-items: center;
     background-color: hsl(120, 40%, 20%);
     border-radius: 6rem;
-    color: hsl(0, 0%, 100%);
     display: none;
     font-size: 2rem;
     opacity: .7;
@@ -15,7 +14,11 @@
     height: 4rem;
 
     p {
+        color: hsl(0, 0%, 100%);
         margin-top: .6rem;
+
+
+
     }
 
     &.success {
