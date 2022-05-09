@@ -934,8 +934,15 @@ footer ul li {
 }
 
 .switch3-checked {
-  background-color: #e74c3c;
+  background-color: hsl(46deg, 100%, 20%);
   box-shadow: none;
+}
+
+.ck .ck-toolbar {
+  background-color: hsl(46deg, 100%, 20%);
+}
+.ck .ck-toolbar button {
+  color: hsl(0deg, 0%, 60%);
 }
 
 .cart {
@@ -1243,36 +1250,71 @@ footer ul li {
 }
 .panel .panel-header {
   background-color: hsl(46deg, 100%, 20%);
+  padding: 0 5%;
+  width: 90%;
+}
+.panel .panel-header .panel-header-title {
+  display: flex;
+  justify-content: flex-start;
 }
 .panel .panel-header .panel-header-hamburger {
   display: flex;
   justify-content: flex-end;
 }
 .panel .panel-publish .panel-publish-top ul {
-  height: 6rem;
   align-items: center;
-}
-.panel .panel-publish .panel-publish-top .top-options-left ul {
   display: flex;
+  height: 6rem;
 }
 .panel .panel-publish .panel-publish-top .top-options-left ul li {
   background-color: hsl(46deg, 100%, 20%);
   cursor: pointer;
-  margin: 0.2rem;
+  margin: 0.4rem;
   padding: 0.8rem;
 }
 .panel .panel-publish .panel-publish-top .top-options-left ul li:hover {
   background-color: hsl(46deg, 100%, 30%);
 }
-.panel .panel-publish .panel-publish-top .top-options-right ul {
-  display: flex;
-}
 .panel .panel-publish .panel-publish-top .top-options-right ul li {
-  margin: 1rem;
+  margin: 0.4rem;
 }
 .panel .panel-publish .panel-publish-top .top-options-right ul li svg {
+  color: hsl(46deg, 100%, 20%);
   cursor: pointer;
   width: 30%;
+}
+.panel .panel-publish .panel-publish-top .top-options-right ul li svg:hover {
+  color: hsl(46deg, 100%, 30%);
+}
+.panel .panel-publish-form {
+  margin: 0 5%;
+  width: 90%;
+}
+.panel .panel-publish-form .form-category, .panel .panel-publish-form .form-name {
+  display: flex;
+  flex-direction: column;
+}
+.panel .panel-publish-form .form-category label, .panel .panel-publish-form .form-name label {
+  color: hsl(0deg, 0%, 100%);
+  margin: 0.4rem 0;
+}
+.panel .panel-publish-form .form-category input, .panel .panel-publish-form .form-category select, .panel .panel-publish-form .form-name input, .panel .panel-publish-form .form-name select {
+  background: none;
+  border: none;
+  border-bottom: 0.1rem solid hsl(46deg, 100%, 20%);
+  color: hsl(0deg, 0%, 100%);
+  margin: 1rem 0;
+}
+.panel .panel-publish-form .form-category input option, .panel .panel-publish-form .form-category select option, .panel .panel-publish-form .form-name input option, .panel .panel-publish-form .form-name select option {
+  background-color: hsl(240deg, 9%, 23%);
+  color: hsl(0deg, 0%, 100%);
+}
+.panel .panel-publish-form .form-category input:focus, .panel .panel-publish-form .form-category select:focus, .panel .panel-publish-form .form-name input:focus, .panel .panel-publish-form .form-name select:focus {
+  border: 0.1rem solid hsl(46deg, 100%, 30%);
+  border-radius: 1rem;
+}
+.panel .panel-publish-form .panel-title span {
+  background-color: hsl(46deg, 100%, 20%);
 }
 
 /*# sourceMappingURL=style.css.map */

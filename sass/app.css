@@ -979,21 +979,105 @@ footer ul li {
   display: block;
 }
 
-.added {
+.notification {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #1f471f;
-  color: white;
+  border-radius: 6rem;
+  display: none;
   font-size: 2rem;
   opacity: .7;
+  padding: .6rem;
   position: absolute;
   text-align: center;
   top: 14%;
-  left: 42%;
+  left: 40%;
   width: auto;
-  height: 6rem;
+  height: 4rem;
 }
 
-.added.active {
+.notification p {
+  color: white;
+  margin-top: .6rem;
+}
+
+.notification.success {
   display: block;
+}
+
+.notification.error {
+  background-color: red;
+  display: block;
+}
+
+.switch3 {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 2.4rem;
+  border-radius: 3rem;
+  background-color: #f2f3f3;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.302);
+          box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.302);
+}
+
+.switch3 input {
+  display: none;
+}
+
+.switch3 input:checked + div {
+  left: calc(80px - 32px);
+  -webkit-box-shadow: 0px 0px 0px white;
+          box-shadow: 0px 0px 0px white;
+}
+
+.switch3 div {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  border-radius: 27px;
+  background-color: white;
+  top: 5px;
+  left: 5px;
+  -webkit-box-shadow: 0px 0px 1px #969696;
+          box-shadow: 0px 0px 1px #969696;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.switch3 div:before, .switch3 div:after {
+  position: absolute;
+  content: 'ON';
+  width: calc(80px - 40px);
+  height: 2.4rem;
+  line-height: 37px;
+  font-family: 'Varela Round';
+  font-size: 1rem;
+  font-weight: bold;
+  top: -5px;
+}
+
+.switch3 div:before {
+  content: 'OFF';
+  color: white;
+  left: 120%;
+}
+
+.switch3 div:after {
+  content: 'ON';
+  right: 100%;
+  color: white;
+}
+
+.switch3-checked {
+  background-color: #e74c3c;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .cart {
@@ -1322,12 +1406,12 @@ footer ul li {
           justify-content: center;
 }
 
-.product-view .product-view-info .product-view-info-add-to-cart .ad-to-cart-button {
+.product-view .product-view-info .product-view-info-add-to-cart .add-to-cart-button {
   background-color: white;
   border-radius: 8px;
 }
 
-.product-view .product-view-info .product-view-info-add-to-cart .ad-to-cart-button button {
+.product-view .product-view-info .product-view-info-add-to-cart .add-to-cart-button button {
   background-color: #5d5d6f;
   border: 4px solid #664e00;
   border-radius: 6px;
@@ -1335,7 +1419,7 @@ footer ul li {
   cursor: pointer;
 }
 
-.product-view .product-view-info .product-view-info-add-to-cart .ad-to-cart-button button:hover {
+.product-view .product-view-info .product-view-info-add-to-cart .add-to-cart-button button:hover {
   opacity: .9;
   -webkit-transition: .6s;
   transition: .6s;
@@ -1407,7 +1491,7 @@ footer ul li {
 }
 
 .panel .panel-header {
-  background-color: #664E00;
+  background-color: #664e00;
 }
 
 .panel .panel-header .panel-header-hamburger {
@@ -1417,5 +1501,40 @@ footer ul li {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.panel .panel-publish .panel-publish-top ul {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 6rem;
+}
+
+.panel .panel-publish .panel-publish-top .top-options-left ul li {
+  background-color: #664e00;
+  cursor: pointer;
+  margin: .4rem;
+  padding: .8rem;
+}
+
+.panel .panel-publish .panel-publish-top .top-options-left ul li:hover {
+  background-color: #997500;
+}
+
+.panel .panel-publish .panel-publish-top .top-options-right ul li {
+  margin: .4rem;
+}
+
+.panel .panel-publish .panel-publish-top .top-options-right ul li svg {
+  color: #664e00;
+  cursor: pointer;
+  width: 30%;
+}
+
+.panel .panel-publish .panel-publish-top .top-options-right ul li svg:hover {
+  color: #997500;
 }
 /*# sourceMappingURL=app.css.map */
