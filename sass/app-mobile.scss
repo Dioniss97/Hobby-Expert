@@ -16,9 +16,18 @@
 
 // Pages
 @import "pages/home/mobile/home";
+@import "pages/contact/mobile/contact";
+@import "pages/checkout/mobile/checkout";
+@import "pages/cart/mobile/cart";
+@import "pages/product/mobile/product";
+@import "pages/products/mobile/products";
+@import "pages/administration-panel/mobile/administration-panel";
 
 // Components
 @import "components/mobile/categories";
 @import "components/mobile/slider";
 @import "components/mobile/hamburger";
 @import "components/mobile/iframe";
+@import "components/mobile/cart-resume-table";
+@import "components/mobile/amount-button";
+@import "components/mobile/tabs";

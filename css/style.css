@@ -561,7 +561,7 @@ footer ul li {
 .amount-button {
   align-items: center;
   border: 4px solid hsl(240deg, 9%, 40%);
-  border-radius: 6px;
+  border-radius: 0.5rem;
   display: flex;
 }
 .amount-button .minus {

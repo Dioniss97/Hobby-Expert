@@ -6,10 +6,7 @@
   -webkit-user-select: none;
   user-select: none;
 
-  &.index {
-    left: 40px;
-    top: -50px;
-  }
+  top: -3rem;
 }
 
 .hamburger span {
@@ -63,7 +60,7 @@
   position: fixed;
   transition: top 1s;
   top: -100vh;
-  width: 50vh;
+  width: 100%;
   z-index: 3;
 
   ul li a {

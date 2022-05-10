@@ -438,7 +438,8 @@ a:hover, a:focus {
 
 header {
   background-color: hsl(240deg, 9%, 23%);
-  padding: 1rem 0;
+  padding: 1rem 10%;
+  width: 80%;
 }
 header .header-logo {
   display: flex;
@@ -453,18 +454,16 @@ header .header-logo .header-logo-title h1 {
   color: hsl(46deg, 100%, 30%);
 }
 header .header-logo .header-logo-img {
-  margin-left: auto;
-  margin-right: 1rem;
-  margin-top: 0.4rem;
+  margin: 0.5rem 0 0.5rem auto;
   width: 60%;
 }
 
 footer {
   background-color: #a9a9a9;
   border-radius: 20px;
-  margin: 2% auto;
+  margin: 0 auto;
   opacity: 70%;
-  width: 90%;
+  width: 100%;
 }
 footer ul {
   margin-top: 10%;
@@ -525,12 +524,405 @@ footer .mapouter {
   width: 100%;
 }
 
+.contact {
+  background-color: hsl(240deg, 9%, 23%);
+  border-top: 0.2em solid hsl(46deg, 100%, 20%);
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 5% 10%;
+  width: 80%;
+}
+.contact .desktop-two-columns {
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact-info {
+  display: flex;
+  justify-content: center;
+}
+.contact .contact-info .contact-info-logo {
+  width: 14%;
+}
+.contact .contact-info ul {
+  margin: 0;
+}
+.contact .contact-info ul li {
+  display: flex;
+  align-items: center;
+  margin: 2% 0;
+}
+.contact .contact-info ul li span {
+  margin-left: 10%;
+  color: hsl(0deg, 0%, 50%);
+}
+.contact .contact-form {
+  border-top: 0.2rem solid hsl(46deg, 100%, 20%);
+  margin-top: 2rem;
+  padding: 1rem 0;
+  width: 100%;
+}
+.contact .contact-form legend {
+  color: hsl(46deg, 100%, 30%);
+  font-size: 1.6em;
+  font-weight: bold;
+  padding: 2% 0;
+}
+.contact .contact-form label {
+  color: hsl(0deg, 0%, 50%);
+  font-weight: bold;
+}
+.contact .contact-form input {
+  margin: 4% 0;
+  width: 100%;
+}
+.contact .contact-form .contact-form-textarea textarea {
+  margin: 2% 0;
+  width: 100%;
+  min-height: 8em;
+  resize: none;
+}
+.contact .contact-form .enter button {
+  background: linear-gradient(to top, hsl(46deg, 100%, 30%), hsl(240deg, 9%, 23%));
+  border: 2px solid hsl(0deg, 0%, 50%);
+  border-radius: 10px;
+  margin-top: 8%;
+  padding: 10%;
+  width: 100%;
+}
+
+.checkout {
+  background-color: hsl(240deg, 9%, 23%);
+  border-top: 0.4em solid hsl(46deg, 100%, 20%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 5% 10%;
+  width: 80%;
+}
+.checkout .desktop-two-columns {
+  display: flex;
+  flex-direction: column;
+}
+.checkout .checkout-form {
+  display: flex;
+  flex-direction: column;
+}
+.checkout .checkout-form label {
+  color: hsl(0deg, 0%, 100%);
+}
+.checkout .checkout-form input, .checkout .checkout-form select {
+  margin: 1rem 0;
+  width: 100%;
+}
+.checkout .checkout-form select {
+  padding: 0.12rem;
+}
+.checkout .checkout-payment .checkout-payment-radio {
+  margin: 1rem;
+}
+.checkout .checkout-payment .checkout-payment-radio input {
+  margin: 1rem;
+}
+.checkout .checkout-payment button {
+  background: linear-gradient(to top, hsl(46deg, 100%, 30%), hsl(240deg, 9%, 23%));
+  border: 2px solid hsl(0deg, 0%, 50%);
+  border-radius: 10px;
+  color: hsl(0deg, 0%, 100%);
+  margin-top: 8%;
+  padding: 10%;
+  width: 100%;
+}
+
+.cart {
+  background-color: hsl(240deg, 9%, 23%);
+  border-top: 0.4em solid hsl(46deg, 100%, 20%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 2rem 5%;
+  width: 90%;
+}
+.cart .cart-main-table {
+  border: 2px solid hsl(46deg, 100%, 30%);
+  border-radius: 1rem;
+  padding: 5%;
+  width: 90%;
+}
+.cart .cart-main-table table caption {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+.cart .cart-main-table table tbody {
+  height: 16rem;
+}
+.cart .cart-main-table table tbody :nth-child(2) :nth-child(1), .cart .cart-main-table table tbody :nth-child(3) :nth-child(1) {
+  border: none;
+}
+.cart .cart-main-table table tbody tr th, .cart .cart-main-table table tbody tr td {
+  border-left: 2px solid hsl(46deg, 18%, 31%);
+  border-right: 2px solid hsl(46deg, 18%, 31%);
+}
+.cart .cart-main-table table tbody tr th {
+  color: hsl(46deg, 100%, 30%);
+  text-decoration: underline;
+}
+.cart .cart-main-table table tbody tr td {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.8rem;
+  margin: 0 0.4rem;
+}
+.cart .cart-main-table table tr:first-child {
+  justify-items: center;
+}
+.cart .cart-main-table table tr:first-child th:first-child {
+  border: none;
+}
+
+.product-view {
+  background-color: hsl(240deg, 9%, 23%);
+  border-top: 0.4em solid hsl(46deg, 100%, 20%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 4% 5%;
+  width: 90%;
+}
+.product-view .product-view-slider {
+  margin: 2rem 13%;
+  width: 74%;
+}
+.product-view .product-view-slider .product-view-slider-image {
+  cursor: pointer;
+  border: 0.2rem solid hsl(46deg, 100%, 20%);
+  border-radius: 6px;
+  padding: 1rem;
+}
+.product-view .product-view-slider .product-view-slider-image img {
+  width: 100%;
+}
+.product-view .product-view-info {
+  margin: 2rem auto;
+  width: 94%;
+}
+.product-view .product-view-info .product-view-info-price {
+  background-color: hsl(240deg, 9%, 40%);
+  border-radius: 8px;
+  margin-right: auto;
+  padding: 0.4rem;
+  width: fit-content;
+}
+.product-view .product-view-info .product-view-info-price span {
+  color: hsl(46deg, 100%, 36%);
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.product-view .product-view-info .product-view-info-description p {
+  font-size: 0.8rem;
+  text-indent: 2rem;
+}
+.product-view .product-view-info .product-view-info-amount {
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.product-view .product-view-info .product-view-info-amount .amount-title {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+}
+.product-view .product-view-info .product-view-info-add-to-cart {
+  display: flex;
+  justify-content: center;
+}
+.product-view .product-view-info .product-view-info-add-to-cart .add-to-cart-button button {
+  background: linear-gradient(to top, hsl(46deg, 100%, 30%), hsl(240deg, 9%, 23%));
+  border: 2px solid hsl(0deg, 0%, 50%);
+  border-radius: 10px;
+  color: hsl(0deg, 0%, 100%);
+  margin-top: 8%;
+  padding: 10%;
+  width: 100%;
+}
+.product-view .product-view-info > div {
+  margin: 1rem 0;
+}
+
+.products {
+  background-color: hsl(240deg, 9%, 23%);
+  border-top: 0.4em solid hsl(46deg, 100%, 20%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 2rem;
+}
+.products .desktop-two-columns-aside {
+  flex-direction: column;
+}
+.products .products-categories {
+  border-left: 2px solid hsl(46deg, 100%, 20%);
+  margin-bottom: 3rem;
+  top: 1rem;
+}
+.products .products-categories .products-categories-title {
+  margin-bottom: 2rem;
+}
+.products .products-categories .products-categories-title h3 {
+  text-decoration: 4px underline hsl(46deg, 100%, 20%);
+}
+.products .products-categories .products-categories-elements ul {
+  justify-content: space-between;
+  display: flex;
+}
+.products .products-categories .products-categories-elements ul li {
+  margin: 2% 2%;
+  font-size: 0.8rem;
+}
+.products .products-categories .products-categories-elements ul li a:hover {
+  text-decoration: 2px underline hsl(46deg, 100%, 20%);
+  transition: 1s;
+}
+.products .products-gallery {
+  margin: 2%;
+}
+.products .products-gallery .product {
+  background-color: hsl(33deg, 100%, 88%);
+  border-radius: 20px;
+  box-shadow: -6px 6px 16px 4px;
+  padding: 6%;
+  margin-bottom: 2rem;
+}
+.products .products-gallery .product .product-window {
+  align-items: flex-start;
+  display: flex;
+  justify-content: flex-end;
+}
+.products .products-gallery .product .product-window .product-window-price {
+  background-color: hsla(32deg, 100%, 88%, 0.555);
+  border-bottom: 0.1em solid hsl(240deg, 9%, 23%);
+  box-shadow: -1px 4px 8px 1px;
+  border-bottom-left-radius: 10px;
+  padding: 0.4%;
+  position: absolute;
+}
+.products .products-gallery .product .product-title {
+  min-height: 10vh;
+}
+.products .products-gallery .product .product-title h4 {
+  color: hsl(240deg, 9%, 23%);
+}
+.products .products-gallery .product .product-view-button {
+  width: max-content;
+  margin: 0 auto;
+}
+.products .products-gallery .product .product-view-button button {
+  background-color: hsl(45deg, 40%, 40%);
+  border-radius: 0.4rem;
+  color: white;
+  cursor: pointer;
+  padding: 1rem;
+}
+.products .products-gallery .product:hover .product-window-price {
+  padding: 1%;
+  transition: 0.6s;
+}
+
+.panel {
+  background-color: hsl(240deg, 9%, 23%);
+  width: 92%;
+  padding: 1rem 4%;
+}
+.panel .desktop-two-columns, .panel .desktop-two-columns-aside {
+  flex-direction: column;
+}
+.panel .panel-header {
+  background-color: hsl(46deg, 100%, 20%);
+  padding: 0 5%;
+  width: 90%;
+}
+.panel .panel-header .panel-header-title {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 1rem;
+}
+.panel .panel-header .panel-header-hamburger {
+  display: flex;
+  justify-content: flex-end;
+}
+.panel .panel-header .panel-header-hamburger .hamburger {
+  top: -1.8rem;
+}
+.panel .panel-publish .panel-publish-top ul {
+  align-items: center;
+  display: flex;
+  height: 6rem;
+}
+.panel .panel-publish .panel-publish-top .top-options-left ul li {
+  background-color: hsl(46deg, 100%, 20%);
+  cursor: pointer;
+  margin: 0.4rem;
+  padding: 0.8rem;
+}
+.panel .panel-publish .panel-publish-top .top-options-left ul li:hover {
+  background-color: hsl(46deg, 100%, 30%);
+}
+.panel .panel-publish .panel-publish-top .top-options-right ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.panel .panel-publish .panel-publish-top .top-options-right ul li {
+  margin: 0.2rem;
+}
+.panel .panel-publish .panel-publish-top .top-options-right ul li svg {
+  color: hsl(46deg, 100%, 20%);
+  cursor: pointer;
+  width: 30%;
+}
+.panel .panel-publish .panel-publish-top .top-options-right ul li svg:hover {
+  color: hsl(46deg, 100%, 30%);
+}
+.panel .panel-publish-form {
+  margin: 0 5%;
+  width: 90%;
+}
+.panel .panel-publish-form .form-category, .panel .panel-publish-form .form-name {
+  display: flex;
+  flex-direction: column;
+}
+.panel .panel-publish-form .form-category label, .panel .panel-publish-form .form-name label {
+  color: hsl(0deg, 0%, 100%);
+  margin: 0.4rem 0;
+}
+.panel .panel-publish-form .form-category input, .panel .panel-publish-form .form-category select, .panel .panel-publish-form .form-name input, .panel .panel-publish-form .form-name select {
+  background: none;
+  border: none;
+  border-bottom: 0.1rem solid hsl(46deg, 100%, 20%);
+  color: hsl(0deg, 0%, 100%);
+  margin: 1rem 0;
+}
+.panel .panel-publish-form .form-category input option, .panel .panel-publish-form .form-category select option, .panel .panel-publish-form .form-name input option, .panel .panel-publish-form .form-name select option {
+  background-color: hsl(240deg, 9%, 23%);
+  color: hsl(0deg, 0%, 100%);
+}
+.panel .panel-publish-form .form-category input:focus, .panel .panel-publish-form .form-category select:focus, .panel .panel-publish-form .form-name input:focus, .panel .panel-publish-form .form-name select:focus {
+  border: 0.1rem solid hsl(46deg, 100%, 30%);
+  border-radius: 1rem;
+}
+.panel .panel-publish-form .panel-title span {
+  background-color: hsl(46deg, 100%, 20%);
+}
+.panel .panel-post {
+  border-left: 0.2rem solid hsl(46deg, 100%, 30%);
+  border-right: 0.2rem solid hsl(46deg, 100%, 30%);
+  margin: 1rem auto;
+  width: 60%;
+}
+
 .categories {
   padding: 5%;
   width: 90%;
   background-color: #353540;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+}
+.categories .category {
+  margin: 1rem 0;
 }
 .categories .category button {
   background-color: #cacaca;
@@ -544,13 +936,6 @@ footer .mapouter {
   color: #000000;
   text-align: center;
 }
-.categories .category button:hover {
-  background-color: #997500;
-  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.3843137255), 0 18px 50px 0 rgba(255, 255, 255, 0.3843137255);
-}
-.categories .category button:hover h4 {
-  color: #ffffff;
-}
 
 .slider {
   background-color: #353540;
@@ -562,7 +947,8 @@ footer .mapouter {
   margin: auto;
   opacity: 0.7;
   position: absolute;
-  top: 28%;
+  padding: 1rem;
+  top: 34%;
   width: 80%;
 }
 .slider .header-logo-subtitle h3 {
@@ -610,10 +996,7 @@ footer .mapouter {
   z-index: 4;
   -webkit-user-select: none;
   user-select: none;
-}
-.hamburger.index {
-  left: 40px;
-  top: -50px;
+  top: -3rem;
 }
 
 .hamburger span {
@@ -664,7 +1047,7 @@ footer .mapouter {
   position: fixed;
   transition: top 1s;
   top: -100vh;
-  width: 50vh;
+  width: 100%;
   z-index: 3;
 }
 .menu ul li a {
@@ -698,6 +1081,120 @@ footer .mapouter {
 .gmap_canvas {
   overflow: hidden;
   background: none !important;
+}
+
+.cart-resume-table {
+  border: 2px solid hsl(46deg, 100%, 30%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: auto;
+  padding: 2rem 5%;
+  width: 90%;
+}
+.cart-resume-table .cart-buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.cart-resume-table .cart-buttons button {
+  background-color: hsl(46deg, 100%, 20%);
+  border-radius: 1rem;
+  color: hsl(240deg, 9%, 80%);
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.4rem 1rem;
+}
+.cart-resume-table .cart-buttons button:hover {
+  opacity: 0.7;
+  transition: 0.6s;
+}
+.cart-resume-table table caption {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.cart-resume-table table tr :nth-child(2) {
+  border-left: 2px solid hsl(46deg, 18%, 31%);
+}
+.cart-resume-table table tr th, .cart-resume-table table tr td {
+  padding: 1rem 2rem;
+}
+.cart-resume-table table tr th {
+  color: hsl(46deg, 100%, 30%);
+  text-decoration: underline;
+}
+.cart-resume-table table tr td {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.amount-button {
+  align-items: center;
+  display: flex;
+}
+.amount-button .plus, .amount-button .minus {
+  display: flex;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.amount-button .plus button, .amount-button .minus button {
+  background-color: hsl(46deg, 100%, 20%);
+  color: hsl(240deg, 9%, 80%);
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  text-align: center;
+  width: 2.4rem;
+}
+.amount-button .amount-style {
+  display: flex;
+  background-color: hsl(240deg, 9%, 40%);
+}
+.amount-button .amount-style input {
+  background-color: hsl(240deg, 9%, 40%);
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+  padding: 0.4rem 0;
+  text-align: center;
+  width: 1.2rem;
+}
+
+.product-view-info-tabs {
+  padding: 1rem 7%;
+  width: 86%;
+}
+.product-view-info-tabs .tabs {
+  background-color: hsl(240deg, 9%, 40%);
+  display: flex;
+}
+.product-view-info-tabs .tabs .tab {
+  cursor: pointer;
+  padding: 0.4rem 0.2rem;
+  text-align: center;
+}
+.product-view-info-tabs .tabs .tab.active {
+  background-color: hsl(46deg, 100%, 20%);
+}
+.product-view-info-tabs .tabs .tab p {
+  color: hsl(0deg, 0%, 90%);
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+.product-view-info-tabs .contents .content {
+  background-color: hsl(240deg, 9%, 40%);
+  width: 100%;
+  height: 6rem;
+  display: none;
+}
+.product-view-info-tabs .contents .content p {
+  font-size: 0.7rem;
+  padding: 1rem;
+}
+.product-view-info-tabs .contents .content.active {
+  background-color: hsl(46deg, 100%, 20%);
+  display: block;
 }
 
 /*# sourceMappingURL=style-mobile.css.map */

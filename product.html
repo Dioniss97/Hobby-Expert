@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="style/normalize.css"> -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/style-mobile.css">
     <title>Hobby Expert</title>
 </head>
 
 <body>
     <header>
+        <div class="index menu mobile-only" id="menu">
+            <ul>
+                <li><a href="index.html">inicio</a></li>
+                <li><a href="products.html">tienda</a></li>
+                <li><a href="cart.html">carrito</a></li>
+                <li><a href="contact.html">contacto</a></li>
+            </ul>
+        </div>
         <div class="desktop-two-columns">
             <div class="column">
                 <div class="header-logo">
@@ -19,6 +27,13 @@
                         <div class="column">
                             <div class="header-logo-img">
                                 <img src="img/AK47.svg" alt="ak47">
+                            </div>
+                            <div class="header-hamburger mobile-only">
+                                <div class="index hamburger " id="hamburger">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
                             </div>
                         </div>
                         <div class="column">
@@ -33,7 +48,7 @@
                 </div>
             </div>
             <div class="column">
-                <div class="header-menu">
+                <div class="header-menu desktop-only">
                     <ul>
                         <li><a href="index.html">inicio</a></li>
                         <li><a href="products.html">tienda</a></li>
@@ -44,6 +59,7 @@
             </div>
         </div>
     </header>
+    
     <main>
         <div class="product-view">
             <div class="desktop-two-columns">
@@ -52,7 +68,7 @@
                         <div class="product-view-slider-image">
                             <img src="img/ak47.webp" alt="fusil de asalto">
                         </div>
-                        <div class="product-view-slider-miniatures">
+                        <div class="product-view-slider-miniatures desktop-only">
                             <div class="miniature">
                                 <img src="img/slider-miniatures/fusilero/68490dd1c0959bc447e23aeb478dc4d61055c51a.webp"
                                     alt="">
@@ -121,9 +137,15 @@
                     </div>
                     <div class="product-view-info-tabs">
                         <div class="tabs">
-                            <div class="tab active" data-target="1">Descripción</div>
-                            <div class="tab" data-target="2">Especificaciones técnicas</div>
-                            <div class="tab" data-target="3">Opiniones</div>
+                            <div class="tab active" data-target="1">
+                                <p>Descripción</p>
+                            </div>
+                            <div class="tab" data-target="2">
+                                <p>Especificaciones técnicas</p>
+                            </div>
+                            <div class="tab" data-target="3">
+                                <p>Opiniones</p>
+                            </div>
                         </div>
                         <div class="contents">
                             <div class="content active" data-value="1">
@@ -160,8 +182,6 @@
                         <iframe width="500" height="400" id="gmap_canvas"
                             src="https://maps.google.com/maps?q=Black%20Shadow&t=k&z=9&ie=UTF8&iwloc=&output=embed"
                             frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                        <a href="https://fmovies-online.net">fmovies</a><br>
-                        <a href="https://www.embedgooglemap.net">email google map</a>
                     </div>
                 </div>
             </div>

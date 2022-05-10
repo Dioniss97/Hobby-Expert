@@ -5,8 +5,6 @@ import { renderProduct } from "./modulos/product.js";
 import { renderNotification } from "./modulos/notification.js";
 import { renderCkeditor } from "./modulos/desktop/ckeditor.js";
 
-
-
 renderHamburger();
 renderAmount();
 renderTabs();
