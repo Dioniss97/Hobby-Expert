@@ -26,6 +26,7 @@
 @import "components/desktop/notification";
 @import "components/desktop/switch-button";
 @import "components/desktop/ckeditor";
+@import "components/desktop/accordion";
 
 // Pages
 @import "pages/home/desktop/home";
@@ -35,6 +36,4 @@
 @import "pages/product/desktop/product";
 @import "pages/checkout/desktop/checkout";
 @import "pages/administration-panel/desktop/administration-panel";
-
-
-
+@import "pages/faqs/desktop/faqs";

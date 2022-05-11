@@ -17,9 +17,16 @@
         }
     }
 
-    .panel-publish {
+    .panel-posted {
+        border-left: .2rem solid hsl(46, 100%, 30%);
+        border-right: .2rem solid hsl(46, 100%, 30%);
+        margin: 1rem auto;
+        width: 90%;
+    }
 
-        .panel-publish-top {
+    .panel-main {
+
+        .panel-main-elements {
 
             ul {
                 align-items: center;
@@ -27,7 +34,7 @@
                 height: 6rem;
             }
 
-            .top-options-left {
+            .box-options {
 
                 ul {
 
@@ -37,14 +44,14 @@
                         margin: .4rem;
                         padding: .8rem;
                     }
-                    
+
                     li:hover {
                         background-color: hsl(46, 100%, 30%);
                     }
                 }
             }
 
-            .top-options-right {
+            .tool-options {
 
                 ul {
 
@@ -56,6 +63,7 @@
                             cursor: pointer;
                             width: 30%;
                         }
+
                         svg:hover {
                             color: hsl(46, 100%, 30%);
                         }
@@ -63,51 +71,49 @@
                 }
             }
         }
-    }
 
-    .panel-publish-form {
-        margin: 0 5%;
-        width: 90%;
+        .panel-main-form {
+            margin: 0 5%;
+            width: 90%;
 
-        .form-category, .form-name {
-            display: flex;
-            flex-direction: column;
+            .form-category,
+            .form-name {
+                display: flex;
+                flex-direction: column;
 
-            label {
-                color: hsl(0, 0%, 100%);
-                margin: .4rem 0;
-            }
-
-            input, select {
-                background: none;
-                border: none;
-                border-bottom: .1rem solid hsl(46, 100%, 20%);
-                color: hsl(0, 0%, 100%);
-                margin: 1rem 0;
-
-                option {
-                    background-color: hsl(240, 9%, 23%);
+                label {
                     color: hsl(0, 0%, 100%);
+                    margin: .4rem 0;
+                }
+
+                input,
+                select {
+                    background: none;
+                    border: none;
+                    border-bottom: .1rem solid hsl(46, 100%, 20%);
+                    color: hsl(0, 0%, 100%);
+                    margin: 1rem 0;
+
+                    option {
+                        background-color: hsl(240, 9%, 23%);
+                        color: hsl(0, 0%, 100%);
+                    }
+                }
+
+                input:focus,
+                select:focus {
+                    border: .1rem solid hsl(46, 100%, 30%);
+                    border-radius: 1rem;
                 }
             }
-            input:focus, select:focus {
-                border: .1rem solid hsl(46, 100%, 30%);
-                border-radius: 1rem;
-            }
+
         }
 
         .panel-title {
-    
+
             span {
                 background-color: hsl(46, 100%, 20%);
             }
         }
-    }
-
-    .panel-post {
-        border-left: .2rem solid hsl(46, 100%, 30%);
-        border-right: .2rem solid hsl(46, 100%, 30%);
-        margin: 1rem auto;
-        width: 90%;
     }
 }
