@@ -1,26 +1,38 @@
 export let renderAccordion = () => {
-    
-    let questions = document.querySelectorAll(".question-header");
-    let answers = document.querySelectorAll(".answer");
-    let arrows = document.querySelectorAll(".arrow");
 
-    // console.log(questions, answers, arrows);
+let questions = document.querySelectorAll(".question-header");
+let answers = document.querySelectorAll(".answer");
+let arrows = document.querySelectorAll(".arrow");
 
-    if (questions) {
-        questions.forEach((question, i) => {
+// console.log(questions, answers, arrows);
 
-            question.addEventListener("click", () => {
-                arrows.forEach((arrow, i) => {
+if (questions) {
 
-                    answers[i].classList.remove("active");
-                    arrow.classList.remove("active");
-                });
+    questions.forEach((question, i) => {
 
-                // console.log(answers[i], arrows[i]);
+        question.addEventListener("click", () => {
 
-                answers[i].classList.add("active");
-                arrows[i].classList.add("active");
+            arrows.forEach((arrow, i) => {
+
+                answers[i].classList.remove("active");
+                arrow.classList.remove("active");
             });
+
+            // console.log(answers[i], arrows[i]);
+
+            answers[i].classList.add("active");
+            arrows[i].classList.add("active");
+
+            // if (answers[i].classList == "active" && arrows[i].classList == "active") {
+
+            //     answers[i].classList.remove("active");
+            //     arrows[i].classList.remove("active");
+            // } else {
+
+            //     answers[i].classList.add("active");
+            //     arrows[i].classList.add("active");
+            // }
         });
-    }
+    });
+}
 }

@@ -8,8 +8,8 @@
     .slider-title {
 
         position: absolute;
-        top: 20%;
-        left:  20%;
+        top: 24%;
+        left: 14%;
         
         h4 {
             background-color: #cacaca;
@@ -22,20 +22,19 @@
     }
 
     .slider-button {
-
         position: absolute;
-        top: 30%;
-        left:  20%;
+        bottom: 4%;
+        right: 8%;
 
         button {
             border: none;
             border-radius: 8px;
             background-color: #997500;
+            color: #353540;
             cursor: pointer;
-            padding: 1rem;
+            font-weight: bold;
+            padding: 2rem;
             transition-duration: 0.4s;
-            
-            
         }
         
         button:hover {

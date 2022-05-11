@@ -9,8 +9,8 @@
     .cart-main-table {
         border: 2px solid hsl(46, 100%, 30%);
         border-radius: 1rem;
-        padding: 5%;
-        width: 90%;
+        padding: 2%;
+        width: 96%;
 
         table {
 
@@ -24,10 +24,10 @@
             tbody {
                 height: 16rem;
 
-                :nth-child(2), :nth-child(3) { // Quitando el border a la columna de las imágenes.
-
+                :nth-child(1), :nth-child(2), :nth-child(3) { 
+                
                     :nth-child(1) {
-                        border: none;
+                        display: none; // Quitando la columna de las imágenes.
                     }
                 }
 
@@ -36,6 +36,7 @@
                     th,td {
                         border-left: 2px solid hsl(46, 18%, 31%);
                         border-right: 2px solid hsl(46, 18%, 31%);
+                        padding: 1rem;
                     }
     
                     th {

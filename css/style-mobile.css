@@ -643,8 +643,8 @@ footer .mapouter {
 .cart .cart-main-table {
   border: 2px solid hsl(46deg, 100%, 30%);
   border-radius: 1rem;
-  padding: 5%;
-  width: 90%;
+  padding: 2%;
+  width: 96%;
 }
 .cart .cart-main-table table caption {
   color: hsl(0deg, 0%, 100%);
@@ -655,12 +655,13 @@ footer .mapouter {
 .cart .cart-main-table table tbody {
   height: 16rem;
 }
-.cart .cart-main-table table tbody :nth-child(2) :nth-child(1), .cart .cart-main-table table tbody :nth-child(3) :nth-child(1) {
-  border: none;
+.cart .cart-main-table table tbody :nth-child(1) :nth-child(1), .cart .cart-main-table table tbody :nth-child(2) :nth-child(1), .cart .cart-main-table table tbody :nth-child(3) :nth-child(1) {
+  display: none;
 }
 .cart .cart-main-table table tbody tr th, .cart .cart-main-table table tbody tr td {
   border-left: 2px solid hsl(46deg, 18%, 31%);
   border-right: 2px solid hsl(46deg, 18%, 31%);
+  padding: 1rem;
 }
 .cart .cart-main-table table tbody tr th {
   color: hsl(46deg, 100%, 30%);
