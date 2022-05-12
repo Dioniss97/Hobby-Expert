@@ -433,6 +433,10 @@ body {
 }
 
 main {
+  background-color: hsl(240deg, 9%, 23%);
+  border-top: 0.2rem solid hsl(46deg, 100%, 30%);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   margin: 0 auto;
   width: 90%;
 }
@@ -558,6 +562,67 @@ footer ul li {
   width: 100%;
 }
 
+.faqs {
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 80%;
+}
+.faqs .faqs-header {
+  border: 0.1rem solid hsl(46deg, 100%, 30%);
+  border-radius: 1rem;
+  margin: 2rem auto;
+  width: fit-content;
+}
+.faqs .faqs-header h3 {
+  padding: 1rem;
+}
+.faqs .tab {
+  overflow: hidden;
+}
+.faqs .tab .question-header {
+  align-items: center;
+  background-color: hsl(46deg, 100%, 30%);
+  border-bottom: 0.2rem double hsl(240deg, 9%, 23%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.faqs .tab .question-header .question span {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+}
+@keyframes smooth {
+  from {
+    transform: translateX(-60rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.faqs .tab .question-header .arrow.active {
+  transform: rotate(180deg);
+  transition: 1.2s;
+}
+.faqs .tab .question-header .arrow svg {
+  color: hsl(0deg, 0%, 100%);
+}
+.faqs .tab .answer {
+  align-items: center;
+  background-color: #664E00;
+  display: none;
+  justify-content: center;
+  padding: 1rem 10%;
+  position: absolute;
+  width: 80%;
+}
+.faqs .tab .answer.active {
+  animation: 1s linear smooth;
+  display: block;
+  position: static;
+}
+
 .amount-button {
   align-items: center;
   border: 4px solid hsl(240deg, 9%, 40%);
@@ -634,46 +699,6 @@ footer ul li {
   color: #ffffff;
 }
 
-.slider {
-  background-color: #353540;
-}
-.slider .slider-image {
-  width: 100%;
-}
-.slider .slider-title {
-  position: absolute;
-  top: 24%;
-  left: 14%;
-}
-.slider .slider-title h4 {
-  background-color: #cacaca;
-  border-radius: 8px;
-  color: #664e00;
-  font-size: 2em;
-  opacity: 70%;
-  padding: 1rem;
-}
-.slider .slider-button {
-  position: absolute;
-  bottom: 4%;
-  right: 8%;
-}
-.slider .slider-button button {
-  border: none;
-  border-radius: 8px;
-  background-color: #997500;
-  color: #353540;
-  cursor: pointer;
-  font-weight: bold;
-  padding: 2rem;
-  transition-duration: 0.4s;
-}
-.slider .slider-button button:hover {
-  background-color: #997500;
-  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.3843137255), 0 18px 50px 0 rgba(255, 255, 255, 0.3843137255);
-  color: hsl(0deg, 0%, 100%);
-}
-
 .cart-resume-table {
   border: 2px solid hsl(46deg, 100%, 30%);
   border-radius: 1rem;
@@ -719,25 +744,11 @@ footer ul li {
   color: hsl(0deg, 0%, 100%);
 }
 
-iframe {
-  border: none;
-  width: 100%;
+.ck .ck-toolbar {
+  background-color: hsl(46deg, 100%, 20%);
 }
-
-.footer-map {
-  border: 0.8em solid #808080;
-  height: 80%;
-  width: 80%;
-  margin: 10%;
-}
-.gmap_canvas {
-  overflow: hidden;
-  background: none !important;
-  width: 100%;
-}
-.gmap_canvas #gmap_canvas {
-  width: 100%;
-  height: 100%;
+.ck .ck-toolbar button {
+  color: hsl(0deg, 0%, 60%);
 }
 
 .hamburger {
@@ -828,34 +839,37 @@ iframe {
   color: hsl(46deg, 100%, 20%);
 }
 
-.tabs {
-  background-color: hsl(240deg, 9%, 40%);
-  display: flex;
-  justify-content: space-between;
-}
-.tabs .tab {
-  cursor: pointer;
-  padding: 1rem;
-}
-.tabs .tab.active {
-  background-color: hsl(46deg, 100%, 20%);
-}
-
-.contents .content {
-  background-color: hsl(240deg, 9%, 40%);
+iframe {
+  border: none;
   width: 100%;
-  height: 6rem;
-  display: none;
-}
-.contents .content p {
-  padding: 1rem;
-}
-.contents .content.active {
-  background-color: hsl(46deg, 100%, 20%);
-  display: block;
 }
 
+.footer-map {
+  border: 0.8em solid #808080;
+  height: 80%;
+  width: 80%;
+  margin: 10%;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+}
+.gmap_canvas #gmap_canvas {
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes translate {
+  from {
+    transform: translateX(-60rem);
+  }
+  to {
+    transform: translateX(60rem);
+  }
+}
 .notification {
+  animation: 5s linear translate;
   align-items: center;
   background-color: hsl(120deg, 40%, 20%);
   border-radius: 6rem;
@@ -880,6 +894,46 @@ iframe {
 .notification.error {
   background-color: hsl(0deg, 100%, 50%);
   display: block;
+}
+
+.slider {
+  background-color: #353540;
+}
+.slider .slider-image {
+  width: 100%;
+}
+.slider .slider-title {
+  position: absolute;
+  top: 24%;
+  left: 14%;
+}
+.slider .slider-title h4 {
+  background-color: #cacaca;
+  border-radius: 8px;
+  color: #664e00;
+  font-size: 2em;
+  opacity: 70%;
+  padding: 1rem;
+}
+.slider .slider-button {
+  position: absolute;
+  bottom: 4%;
+  right: 8%;
+}
+.slider .slider-button button {
+  border: none;
+  border-radius: 8px;
+  background-color: #997500;
+  color: #353540;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 2rem;
+  transition-duration: 0.4s;
+}
+.slider .slider-button button:hover {
+  background-color: #997500;
+  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.3843137255), 0 18px 50px 0 rgba(255, 255, 255, 0.3843137255);
+  color: hsl(0deg, 0%, 100%);
 }
 
 .switch3 {
@@ -945,64 +999,61 @@ iframe {
   box-shadow: none;
 }
 
-.ck .ck-toolbar {
-  background-color: hsl(46deg, 100%, 20%);
-}
-.ck .ck-toolbar button {
-  color: hsl(0deg, 0%, 60%);
-}
-
-.faqs {
-  margin: 0 auto;
-  padding: 2rem 0;
-  width: 80%;
-}
-.faqs .tab {
-  overflow: hidden;
-}
-.faqs .tab .question-header {
-  align-items: center;
-  background-color: hsl(46deg, 100%, 30%);
-  border-bottom: 0.2rem double hsl(240deg, 9%, 23%);
+.tabs {
+  background-color: hsl(240deg, 9%, 40%);
   display: flex;
   justify-content: space-between;
+}
+.tabs .tab {
+  cursor: pointer;
   padding: 1rem;
-  position: relative;
-  z-index: 1;
 }
-.faqs .tab .question-header .question span {
-  color: hsl(0deg, 0%, 100%);
-  font-weight: bold;
+.tabs .tab.active {
+  background-color: hsl(46deg, 100%, 20%);
 }
-@keyframes translate {
-  from {
-    transform: translateY(-12rem);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-.faqs .tab .question-header .arrow.active {
-  transform: rotate(180deg);
-  transition: 0.6s;
-}
-.faqs .tab .question-header .arrow svg {
-  color: hsl(0deg, 0%, 100%);
-}
-.faqs .tab .answer {
-  align-items: center;
-  background-color: #664E00;
+
+.contents .content {
+  background-color: hsl(240deg, 9%, 40%);
+  width: 100%;
+  height: 6rem;
   display: none;
-  justify-content: center;
-  padding: 1rem 10%;
-  position: absolute;
-  width: 80%;
 }
-.faqs .tab .answer.active {
-  animation: 0.6s linear translate;
+.contents .content p {
+  padding: 1rem;
+}
+.contents .content.active {
+  background-color: hsl(46deg, 100%, 20%);
   display: block;
-  position: static;
-  transition: 0.6s;
+}
+
+.form {
+  width: 90%;
+  margin: 5%;
+}
+.form label {
+  color: hsl(0deg, 0%, 100%);
+  display: block;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 1rem auto;
+  width: fit-content;
+}
+.form .select-tabs {
+  background-color: hsl(240deg, 9%, 40%);
+  width: 100%;
+}
+.form .contents .content {
+  background-color: hsl(240deg, 9%, 40%);
+  width: 100%;
+  height: fit-content;
+  display: none;
+}
+.form .contents .content p {
+  padding: 1rem;
+}
+.form .contents .content.active {
+  background-color: hsl(46deg, 100%, 20%);
+  display: block;
 }
 
 .cart {
@@ -1052,17 +1103,19 @@ iframe {
   border-top: 0.4em solid hsl(46deg, 100%, 20%);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  padding: 2rem;
+  padding: 2rem 5%;
+  width: 90%;
 }
 .products .products-categories {
-  border-left: 2px solid hsl(46deg, 100%, 20%);
+  border-left: 0.2rem solid hsl(46deg, 100%, 20%);
+  margin: 1rem;
   position: sticky;
-  top: 1rem;
+  top: 10%;
 }
-.products .products-categories .products-categories-title {
+.products .products-categories .products-categories-elements .products-categories-title {
   margin-bottom: 2rem;
 }
-.products .products-categories .products-categories-title h3 {
+.products .products-categories .products-categories-elements .products-categories-title h3 {
   text-decoration: 4px underline hsl(46deg, 100%, 20%);
 }
 .products .products-categories .products-categories-elements ul {
@@ -1075,13 +1128,11 @@ iframe {
   text-decoration: 2px underline hsl(46deg, 100%, 20%);
   transition: 1s;
 }
-.products .products-gallery {
-  margin: 2%;
-}
 .products .products-gallery .product {
   background-color: hsl(33deg, 100%, 88%);
   border-radius: 20px;
-  box-shadow: -6px 6px 16px 4px;
+  box-shadow: 0.6rem 0.6rem 1.2rem 0.4rem;
+  cursor: pointer;
   padding: 6%;
   margin-bottom: 2rem;
 }
@@ -1109,8 +1160,13 @@ iframe {
   margin: 0 auto;
 }
 .products .products-gallery .product .product-view-button button {
+  border-radius: 1rem;
   color: hsl(0deg, 0%, 0%);
   cursor: pointer;
+  padding: 1rem;
+}
+.products .products-gallery .product .product-view-button button:hover {
+  background: linear-gradient(#EFEFEF, hsl(46deg, 100%, 20%));
 }
 .products .products-gallery .product:hover .product-window-price {
   padding: 1%;
@@ -1278,17 +1334,21 @@ iframe {
 .checkout .checkout-form label {
   color: hsl(0deg, 0%, 100%);
 }
-.checkout .checkout-form input, .checkout .checkout-form select {
+.checkout .checkout-form input,
+.checkout .checkout-form select {
   margin: 1rem 0;
   width: 100%;
 }
 .checkout .checkout-form select {
   padding: 0.12rem;
 }
-.checkout .checkout-payment .checkout-payment-radio {
+.checkout .checkout-payment .radios-form .checkout-payment-radio {
   margin: 1rem;
 }
-.checkout .checkout-payment .checkout-payment-radio input {
+.checkout .checkout-payment .radios-form .checkout-payment-radio label {
+  color: hsl(0deg, 0%, 100%);
+}
+.checkout .checkout-payment .radios-form .checkout-payment-radio input {
   margin: 1rem;
 }
 .checkout .checkout-payment button {
@@ -1321,35 +1381,35 @@ iframe {
   display: flex;
   justify-content: flex-end;
 }
-.panel .panel-posted {
+.panel .panel-aside {
   border-left: 0.2rem solid hsl(46deg, 100%, 30%);
   border-right: 0.2rem solid hsl(46deg, 100%, 30%);
   margin: 1rem auto;
   width: 90%;
 }
-.panel .panel-main .panel-main-elements ul {
+.panel .panel-main ul {
   align-items: center;
   display: flex;
   height: 6rem;
 }
-.panel .panel-main .panel-main-elements .box-options ul li {
+.panel .panel-main .box-options ul li {
   background-color: hsl(46deg, 100%, 20%);
   cursor: pointer;
   margin: 0.4rem;
   padding: 0.8rem;
 }
-.panel .panel-main .panel-main-elements .box-options ul li:hover {
+.panel .panel-main .box-options ul li:hover {
   background-color: hsl(46deg, 100%, 30%);
 }
-.panel .panel-main .panel-main-elements .tool-options ul li {
+.panel .panel-main .tool-options ul li {
   margin: 0.4rem;
 }
-.panel .panel-main .panel-main-elements .tool-options ul li svg {
+.panel .panel-main .tool-options ul li svg {
   color: hsl(46deg, 100%, 20%);
   cursor: pointer;
   width: 30%;
 }
-.panel .panel-main .panel-main-elements .tool-options ul li svg:hover {
+.panel .panel-main .tool-options ul li svg:hover {
   color: hsl(46deg, 100%, 30%);
 }
 .panel .panel-main .panel-main-form {
@@ -1392,13 +1452,6 @@ iframe {
 }
 .panel .panel-main .panel-title span {
   background-color: hsl(46deg, 100%, 20%);
-}
-
-main {
-  background-color: hsl(240deg, 9%, 23%);
-  border-top: 0.2rem solid hsl(46deg, 100%, 30%);
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

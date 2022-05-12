@@ -25,11 +25,13 @@
 @import "pages/faqs/mobile/faqs";
 
 // Components
+@import "components/mobile/accordion";
+@import "components/mobile/amount-button";
+@import "components/mobile/cart-resume-table";
 @import "components/mobile/categories";
-@import "components/mobile/slider";
 @import "components/mobile/hamburger";
 @import "components/mobile/iframe";
-@import "components/mobile/cart-resume-table";
-@import "components/mobile/amount-button";
+@import "components/mobile/notification";
+@import "components/mobile/slider";
 @import "components/mobile/tabs";
-@import "components/mobile/accordion";
+@import "components/mobile/select-tabs";

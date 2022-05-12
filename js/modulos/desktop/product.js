@@ -22,12 +22,6 @@ export let renderProduct = () => {
                     }
                 }));
             }
-            // if (amount.value < 0) {
-            //     renderNotification("Cagaste", "error");
-            // }
-            // else {
-            //     renderNotification("Producto añadido con exito.", "success");
-            // }
         });
     }
 }

@@ -5,14 +5,10 @@ export let renderNotification = () => {
         let notification = document.querySelector(".notification");
         let notificationText = document.querySelector(".notification-message")
 
+        notification.classList.remove("success", "error");
+
         notificationText.innerHTML = event.detail.text;
         notification.classList.add(event.detail.type);
-
-        // if (status == "success") {
-        //     added.classList.add("active");
-        // } else if (status == "error") {
-        //     added.classList.add("active-red");
-        // }
 
         setTimeout(() => {
 

@@ -3,6 +3,17 @@
     padding: 2rem 0;
     width: 80%;
 
+    .faqs-header {
+        border: .1rem solid hsl(46, 100%, 30%);
+        border-radius: 1rem;
+        margin: 2rem auto;
+        width: fit-content;
+
+        h3 {
+            padding: 1rem;
+        }
+    }
+
     .tab {
         overflow: hidden;
 
@@ -36,9 +47,11 @@
             }
 
             .arrow {
+
                 // Arriba
 
                 &.active {
+                    
                     // Abajo
 
                     transform: rotate(180deg);

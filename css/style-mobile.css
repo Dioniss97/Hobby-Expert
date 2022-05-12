@@ -428,6 +428,15 @@ a:hover, a:focus {
   outline-offset: 0;
 }
 
+main {
+  background-color: hsl(240deg, 9%, 23%);
+  border-top: 0.2rem solid hsl(46deg, 100%, 30%);
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
 .desktop-only {
   display: none;
 }
@@ -595,8 +604,8 @@ footer .mapouter {
   border-top: 0.4em solid hsl(46deg, 100%, 20%);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  padding: 5% 10%;
-  width: 80%;
+  padding: 5%;
+  width: 90%;
 }
 .checkout .desktop-two-columns {
   display: flex;
@@ -605,8 +614,10 @@ footer .mapouter {
 .checkout .checkout-form {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 .checkout .checkout-form label {
+  margin-left: 0.3rem;
   color: hsl(0deg, 0%, 100%);
 }
 .checkout .checkout-form input, .checkout .checkout-form select {
@@ -614,10 +625,16 @@ footer .mapouter {
   width: 100%;
 }
 .checkout .checkout-form select {
-  padding: 0.12rem;
+  padding: 0.6rem;
+}
+.checkout .checkout-payment {
+  margin: 1rem;
 }
 .checkout .checkout-payment .checkout-payment-radio {
   margin: 1rem;
+}
+.checkout .checkout-payment .checkout-payment-radio label {
+  color: hsl(0deg, 0%, 100%);
 }
 .checkout .checkout-payment .checkout-payment-radio input {
   margin: 1rem;
@@ -757,27 +774,20 @@ footer .mapouter {
   flex-direction: column;
 }
 .products .products-categories {
-  border-left: 2px solid hsl(46deg, 100%, 20%);
-  margin-bottom: 3rem;
-  top: 1rem;
+  border-left: 0.2rem solid hsl(46deg, 100%, 20%);
+  margin: 2rem auto;
+  width: fit-content;
 }
-.products .products-categories .products-categories-title {
+.products .products-categories .products-categories-elements .products-categories-title label {
+  color: hsl(0deg, 0%, 100%);
+  display: block;
+  font-weight: bold;
   margin-bottom: 2rem;
 }
-.products .products-categories .products-categories-title h3 {
-  text-decoration: 4px underline hsl(46deg, 100%, 20%);
-}
-.products .products-categories .products-categories-elements ul {
-  justify-content: space-between;
-  display: flex;
-}
-.products .products-categories .products-categories-elements ul li {
-  margin: 2% 2%;
-  font-size: 0.8rem;
-}
-.products .products-categories .products-categories-elements ul li a:hover {
-  text-decoration: 2px underline hsl(46deg, 100%, 20%);
-  transition: 1s;
+.products .products-categories .products-categories-elements form select {
+  background-color: hsl(46deg, 100%, 20%);
+  border-color: hsl(46deg, 100%, 20%);
+  color: hsl(0deg, 0%, 100%);
 }
 .products .products-gallery {
   margin: 2%;
@@ -829,7 +839,8 @@ footer .mapouter {
   width: 92%;
   padding: 1rem 4%;
 }
-.panel .desktop-two-columns, .panel .desktop-two-columns-aside {
+.panel .desktop-two-columns,
+.panel .desktop-two-columns-aside {
   flex-direction: column;
 }
 .panel .panel-header {
@@ -849,77 +860,211 @@ footer .mapouter {
 .panel .panel-header .panel-header-hamburger .hamburger {
   top: -1.8rem;
 }
-.panel .panel-publish .panel-publish-top ul {
-  align-items: center;
-  display: flex;
-  height: 6rem;
+.panel .panel-aside {
+  border-left: 0.2rem solid hsl(46deg, 100%, 30%);
+  border-right: 0.2rem solid hsl(46deg, 100%, 30%);
+  margin: 1rem auto;
+  width: 60%;
 }
-.panel .panel-publish .panel-publish-top .top-options-left ul li {
+.panel .panel-aside ul li {
+  color: hsl(0deg, 0%, 100%);
+}
+.panel .panel-main .box-options ul li {
   background-color: hsl(46deg, 100%, 20%);
   cursor: pointer;
   margin: 0.4rem;
   padding: 0.8rem;
 }
-.panel .panel-publish .panel-publish-top .top-options-left ul li:hover {
+.panel .panel-main .box-options ul li:active {
   background-color: hsl(46deg, 100%, 30%);
 }
-.panel .panel-publish .panel-publish-top .top-options-right ul {
+.panel .panel-main .tool-options ul {
   display: flex;
   justify-content: space-evenly;
 }
-.panel .panel-publish .panel-publish-top .top-options-right ul li {
+.panel .panel-main .tool-options ul li {
   margin: 0.2rem;
 }
-.panel .panel-publish .panel-publish-top .top-options-right ul li svg {
+.panel .panel-main .tool-options ul li svg {
   color: hsl(46deg, 100%, 20%);
   cursor: pointer;
   width: 30%;
 }
-.panel .panel-publish .panel-publish-top .top-options-right ul li svg:hover {
+.panel .panel-main .tool-options ul li svg:active {
   color: hsl(46deg, 100%, 30%);
 }
-.panel .panel-publish-form {
+.panel .panel-main .panel-main-form {
   margin: 0 5%;
   width: 90%;
 }
-.panel .panel-publish-form .form-category, .panel .panel-publish-form .form-name {
-  display: flex;
-  flex-direction: column;
-}
-.panel .panel-publish-form .form-category label, .panel .panel-publish-form .form-name label {
+.panel .panel-main .panel-main-form label {
   color: hsl(0deg, 0%, 100%);
   margin: 0.4rem 0;
 }
-.panel .panel-publish-form .form-category input, .panel .panel-publish-form .form-category select, .panel .panel-publish-form .form-name input, .panel .panel-publish-form .form-name select {
+.panel .panel-main .panel-main-form .form-category,
+.panel .panel-main .panel-main-form .form-name {
+  display: flex;
+  flex-direction: column;
+}
+.panel .panel-main .panel-main-form select {
   background: none;
   border: none;
   border-bottom: 0.1rem solid hsl(46deg, 100%, 20%);
   color: hsl(0deg, 0%, 100%);
   margin: 1rem 0;
 }
-.panel .panel-publish-form .form-category input option, .panel .panel-publish-form .form-category select option, .panel .panel-publish-form .form-name input option, .panel .panel-publish-form .form-name select option {
+.panel .panel-main .panel-main-form select option {
   background-color: hsl(240deg, 9%, 23%);
   color: hsl(0deg, 0%, 100%);
 }
-.panel .panel-publish-form .form-category input:focus, .panel .panel-publish-form .form-category select:focus, .panel .panel-publish-form .form-name input:focus, .panel .panel-publish-form .form-name select:focus {
+.panel .panel-main .panel-main-form input:focus,
+.panel .panel-main .panel-main-form select:focus {
   border: 0.1rem solid hsl(46deg, 100%, 30%);
   border-radius: 1rem;
+  border-style: none;
 }
-.panel .panel-publish-form .panel-title span {
+.panel .panel-main .panel-main-form .panel-title span {
   background-color: hsl(46deg, 100%, 20%);
 }
-.panel .panel-post {
-  border-left: 0.2rem solid hsl(46deg, 100%, 30%);
-  border-right: 0.2rem solid hsl(46deg, 100%, 30%);
-  margin: 1rem auto;
-  width: 60%;
+
+.faqs {
+  margin: 0 auto;
+  padding: 2rem 0;
+  width: 80%;
+}
+.faqs .faqs-header {
+  border: 0.1rem solid hsl(46deg, 100%, 30%);
+  border-radius: 1rem;
+  margin: 2rem auto;
+  width: fit-content;
+}
+.faqs .faqs-header h3 {
+  padding: 1rem;
+}
+.faqs .tab {
+  overflow: hidden;
+}
+.faqs .tab .question-header {
+  align-items: center;
+  background-color: hsl(46deg, 100%, 30%);
+  border-bottom: 0.2rem double hsl(240deg, 9%, 23%);
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  z-index: 1;
+}
+.faqs .tab .question-header .question span {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+}
+@keyframes translate {
+  from {
+    transform: translateY(-12rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.faqs .tab .question-header .arrow.active {
+  transform: rotate(180deg);
+  transition: 0.6s;
+}
+.faqs .tab .question-header .arrow svg {
+  color: hsl(0deg, 0%, 100%);
+}
+.faqs .tab .answer {
+  align-items: center;
+  background-color: #664E00;
+  display: none;
+  justify-content: center;
+  padding: 1rem 10%;
+  position: absolute;
+  width: 80%;
+}
+.faqs .tab .answer.active {
+  animation: 0.6s linear translate;
+  display: block;
+  position: static;
+  transition: 0.6s;
 }
 
-main {
-  background-color: hsl(240deg, 9%, 23%);
-  border-top: 0.2rem solid hsl(46deg, 100%, 30%);
-  border-bottom-right-radius: 1rem;
-  border-bottom-left-radius: 1rem;
+.amount-button {
+  align-items: center;
+  display: flex;
+}
+.amount-button .plus, .amount-button .minus {
+  display: flex;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.amount-button .plus button, .amount-button .minus button {
+  background-color: hsl(46deg, 100%, 20%);
+  color: hsl(240deg, 9%, 80%);
+  cursor: pointer;
+  padding: 0.4rem 1rem;
+  text-align: center;
+  width: 2.4rem;
+}
+.amount-button .amount-style {
+  display: flex;
+  background-color: hsl(240deg, 9%, 40%);
+}
+.amount-button .amount-style input {
+  background-color: hsl(240deg, 9%, 40%);
+  border: none;
+  color: hsl(0deg, 0%, 100%);
+  font-weight: bold;
+  padding: 0.4rem 0;
+  text-align: center;
+  width: 1.2rem;
+}
+
+.cart-resume-table {
+  border: 2px solid hsl(46deg, 100%, 30%);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  margin-left: auto;
+  padding: 2rem 5%;
+  width: 90%;
+}
+.cart-resume-table .cart-buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.cart-resume-table .cart-buttons button {
+  background-color: hsl(46deg, 100%, 20%);
+  border-radius: 1rem;
+  color: hsl(240deg, 9%, 80%);
+  cursor: pointer;
+  padding: 1rem;
+  margin: 0.4rem 1rem;
+}
+.cart-resume-table .cart-buttons button:hover {
+  opacity: 0.7;
+  transition: 0.6s;
+}
+.cart-resume-table table caption {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.cart-resume-table table tr :nth-child(2) {
+  border-left: 2px solid hsl(46deg, 18%, 31%);
+}
+.cart-resume-table table tr th, .cart-resume-table table tr td {
+  padding: 1rem 2rem;
+}
+.cart-resume-table table tr th {
+  color: hsl(46deg, 100%, 30%);
+  text-decoration: underline;
+}
+.cart-resume-table table tr td {
+  color: hsl(0deg, 0%, 100%);
 }
 
 .categories {
@@ -943,59 +1088,6 @@ main {
 .categories .category button h4 {
   color: #000000;
   text-align: center;
-}
-
-.slider {
-  background-color: #353540;
-  width: 100%;
-}
-.slider .header-logo-subtitle {
-  background-color: #cacaca;
-  border-radius: 1rem;
-  margin: auto;
-  opacity: 0.7;
-  position: absolute;
-  padding: 1rem;
-  top: 34%;
-  width: 80%;
-}
-.slider .header-logo-subtitle h3 {
-  color: hsl(46deg, 100%, 20%);
-  text-align: center;
-}
-.slider .slider-image {
-  width: 100%;
-}
-.slider .slider-title {
-  position: absolute;
-  bottom: -10%;
-  left: 20%;
-}
-.slider .slider-title h4 {
-  background-color: #cacaca;
-  border-radius: 8px;
-  color: #664e00;
-  font-size: 2em;
-  opacity: 70%;
-  padding: 1rem;
-}
-.slider .slider-button {
-  position: absolute;
-  bottom: -15%;
-  left: 15%;
-}
-.slider .slider-button button {
-  border: none;
-  border-radius: 8px;
-  background-color: #997500;
-  cursor: pointer;
-  padding: 1rem;
-  transition-duration: 0.4s;
-}
-.slider .slider-button button:hover {
-  background-color: #997500;
-  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.3843137255), 0 18px 50px 0 rgba(255, 255, 255, 0.3843137255);
-  color: hsl(0deg, 0%, 100%);
 }
 
 .hamburger {
@@ -1091,82 +1183,92 @@ main {
   background: none !important;
 }
 
-.cart-resume-table {
-  border: 2px solid hsl(46deg, 100%, 30%);
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
+@keyframes translate {
+  from {
+    transform: translateY(-30rem);
+  }
+  to {
+    transform: translateY(30rem);
+  }
+}
+.notification {
+  animation: 5s linear translate;
   align-items: center;
-  margin-top: 1rem;
-  margin-left: auto;
-  padding: 2rem 5%;
-  width: 90%;
+  background-color: hsl(120deg, 40%, 20%);
+  border-radius: 6rem;
+  bottom: 18%;
+  display: none;
+  font-size: 2rem;
+  opacity: 0.6;
+  padding: 0.6rem;
+  position: absolute;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
 }
-.cart-resume-table .cart-buttons {
-  display: flex;
-  justify-content: flex-end;
-  padding: 1rem;
-}
-.cart-resume-table .cart-buttons button {
-  background-color: hsl(46deg, 100%, 20%);
-  border-radius: 1rem;
-  color: hsl(240deg, 9%, 80%);
-  cursor: pointer;
-  padding: 1rem;
-  margin: 0.4rem 1rem;
-}
-.cart-resume-table .cart-buttons button:hover {
-  opacity: 0.7;
-  transition: 0.6s;
-}
-.cart-resume-table table caption {
+.notification p {
   color: hsl(0deg, 0%, 100%);
-  font-size: 1.4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  margin-top: 0.6rem;
 }
-.cart-resume-table table tr :nth-child(2) {
-  border-left: 2px solid hsl(46deg, 18%, 31%);
+.notification.success {
+  display: block;
 }
-.cart-resume-table table tr th, .cart-resume-table table tr td {
-  padding: 1rem 2rem;
-}
-.cart-resume-table table tr th {
-  color: hsl(46deg, 100%, 30%);
-  text-decoration: underline;
-}
-.cart-resume-table table tr td {
-  color: hsl(0deg, 0%, 100%);
+.notification.error {
+  background-color: hsl(0deg, 100%, 50%);
+  display: block;
 }
 
-.amount-button {
-  align-items: center;
-  display: flex;
+.slider {
+  background-color: #353540;
+  width: 100%;
 }
-.amount-button .plus, .amount-button .minus {
-  display: flex;
-  background-color: hsl(0deg, 0%, 100%);
+.slider .header-logo-subtitle {
+  background-color: #cacaca;
+  border-radius: 1rem;
+  margin: auto;
+  opacity: 0.7;
+  position: absolute;
+  padding: 1rem;
+  top: 34%;
+  width: 80%;
 }
-.amount-button .plus button, .amount-button .minus button {
-  background-color: hsl(46deg, 100%, 20%);
-  color: hsl(240deg, 9%, 80%);
-  cursor: pointer;
-  padding: 0.4rem 1rem;
+.slider .header-logo-subtitle h3 {
+  color: hsl(46deg, 100%, 20%);
   text-align: center;
-  width: 2.4rem;
 }
-.amount-button .amount-style {
-  display: flex;
-  background-color: hsl(240deg, 9%, 40%);
+.slider .slider-image {
+  width: 100%;
 }
-.amount-button .amount-style input {
-  background-color: hsl(240deg, 9%, 40%);
+.slider .slider-title {
+  position: absolute;
+  bottom: -10%;
+  left: 20%;
+}
+.slider .slider-title h4 {
+  background-color: #cacaca;
+  border-radius: 8px;
+  color: #664e00;
+  font-size: 2em;
+  opacity: 70%;
+  padding: 1rem;
+}
+.slider .slider-button {
+  position: absolute;
+  bottom: -15%;
+  left: 15%;
+}
+.slider .slider-button button {
   border: none;
+  border-radius: 8px;
+  background-color: #997500;
+  cursor: pointer;
+  padding: 1rem;
+  transition-duration: 0.4s;
+}
+.slider .slider-button button:hover {
+  background-color: #997500;
+  box-shadow: 0 12px 16px 0 rgba(255, 255, 255, 0.3843137255), 0 18px 50px 0 rgba(255, 255, 255, 0.3843137255);
   color: hsl(0deg, 0%, 100%);
-  font-weight: bold;
-  padding: 0.4rem 0;
-  text-align: center;
-  width: 1.2rem;
 }
 
 .product-view-info-tabs {
@@ -1205,57 +1307,34 @@ main {
   display: block;
 }
 
-.faqs {
-  margin: 0 auto;
-  padding: 2rem 0;
-  width: 80%;
+.form {
+  width: 90%;
+  margin: 5%;
 }
-.faqs .tab {
-  overflow: hidden;
-}
-.faqs .tab .question-header {
-  align-items: center;
-  background-color: hsl(46deg, 100%, 30%);
-  border-bottom: 0.2rem double hsl(240deg, 9%, 23%);
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem;
-  position: relative;
-  z-index: 1;
-}
-.faqs .tab .question-header .question span {
+.form label {
   color: hsl(0deg, 0%, 100%);
-  font-weight: bold;
-}
-@keyframes translate {
-  from {
-    transform: translateY(-12rem);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-.faqs .tab .question-header .arrow.active {
-  transform: rotate(180deg);
-  transition: 0.6s;
-}
-.faqs .tab .question-header .arrow svg {
-  color: hsl(0deg, 0%, 100%);
-}
-.faqs .tab .answer {
-  align-items: center;
-  background-color: #664E00;
-  display: none;
-  justify-content: center;
-  padding: 1rem 10%;
-  position: absolute;
-  width: 80%;
-}
-.faqs .tab .answer.active {
-  animation: 0.6s linear translate;
   display: block;
-  position: static;
-  transition: 0.6s;
+  font-weight: bold;
+  text-decoration: underline;
+  margin: 1rem auto;
+  width: fit-content;
+}
+.form .select-tabs {
+  background-color: hsl(240deg, 9%, 40%);
+  width: 100%;
+}
+.form .contents .content {
+  background-color: hsl(240deg, 9%, 40%);
+  width: 100%;
+  height: fit-content;
+  display: none;
+}
+.form .contents .content p {
+  padding: 1rem;
+}
+.form .contents .content.active {
+  background-color: hsl(46deg, 100%, 20%);
+  display: block;
 }
 
 /*# sourceMappingURL=style-mobile.css.map */

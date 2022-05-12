@@ -59,7 +59,7 @@
             </div>
         </div>
     </header>
-    
+
     <main>
         <div class="product-view">
             <div class="desktop-two-columns">
@@ -122,7 +122,7 @@
                                     <input class="amount" type="number" id="amount" disabled value="1">
                                 </div>
                                 <div class="plus">
-                                    <button >+</button>
+                                    <button>+</button>
                                 </div>
                             </div>
                         </div>
@@ -136,7 +136,20 @@
                         </div>
                     </div>
                     <div class="product-view-info-tabs">
-                        <div class="tabs">
+
+                        <!-- --Versión selectTabs-- -->
+
+                        <form class="form" action="">
+                            <label for="">Información extra</label>
+                            <select class="select-tabs" name="" id="">
+                                <option value="">Descripción</option>
+                                <option value="">Especificaciones técnicas</option>
+                                <option value="">Opiniones</option>
+                            </select>
+
+                            <!-- --Versión tabs-- -->
+
+                            <!-- <div class="tabs">
                             <div class="tab active" data-target="1">
                                 <p>Descripción</p>
                             </div>
@@ -146,21 +159,60 @@
                             <div class="tab" data-target="3">
                                 <p>Opiniones</p>
                             </div>
-                        </div>
-                        <div class="contents">
-                            <div class="content active" data-value="1">
-                                <p>Desc</p>
+                        </div> -->
+
+                            <div class="contents">
+                                <div class="content active" data-target="0">
+                                    <p>Desc</p>
+                                </div>
+                                <div class="content" data-target="1">
+                                    <p>Tec</p>
+                                </div>
+                                <div class="content" data-target="2">
+                                    <p>Opinion</p>
+                                </div>
                             </div>
-                            <div class="content" data-value="2">
-                                <p>Tec</p>
+                        </form>
+
+                        <form class="form" action="">
+                            <label for="">Información extra</label>
+                            <select class="select-tabs" name="" id="">
+                                <option value="">Descripción</option>
+                                <option value="">Especificaciones técnicas</option>
+                                <option value="">Opiniones</option>
+                            </select>
+
+                            <!-- --Versión tabs-- -->
+
+                            <!-- <div class="tabs">
+                            <div class="tab active" data-target="1">
+                                <p>Descripción</p>
                             </div>
-                            <div class="content" data-value="3">
-                                <p>Opinion</p>
+                            <div class="tab" data-target="2">
+                                <p>Especificaciones técnicas</p>
                             </div>
-                        </div>
+                            <div class="tab" data-target="3">
+                                <p>Opiniones</p>
+                            </div>
+                        </div> -->
+
+                            <div class="contents">
+                                <div class="content active" data-target="0">
+                                    <p>Desc</p>
+                                </div>
+                                <div class="content" data-target="1">
+                                    <p>Tec</p>
+                                </div>
+                                <div class="content" data-target="2">
+                                    <p>Opinion</p>
+                                </div>
+                            </div>
+                        </form>
+
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
 
@@ -189,5 +241,4 @@
     </footer>
     <script type="module" src="dist/app.js"></script>
 </body>
-
 </html>

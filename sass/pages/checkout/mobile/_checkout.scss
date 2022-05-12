@@ -3,8 +3,8 @@
     border-top: .4em solid hsl(46, 100%, 20%);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 5% 10%;
-    width: 80%;
+    padding: 5%;
+    width: 90%;
 
     .desktop-two-columns {
         display: flex;
@@ -14,8 +14,10 @@
     .checkout-form {
         display: flex;
         flex-direction: column;
+        overflow: hidden;
 
         label {
+            margin-left: .3rem;
             color: hsl(0, 0%, 100%);
         }
 
@@ -23,15 +25,21 @@
             margin: 1rem 0;
             width: 100%;
         }
+
         select {
-            padding: .12rem;
+            padding: .6rem;
         }
     }
 
     .checkout-payment {
+        margin: 1rem;
 
         .checkout-payment-radio {
             margin: 1rem;
+
+            label {
+                color: hsl(0, 0%, 100%);
+            }
 
             input {
                 margin: 1rem;
